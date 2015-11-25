@@ -160,6 +160,13 @@
        float:left;
        top:2%;
      }
+     #name{
+        position:relative;
+        left:0%;
+        margin:0;
+        padding:0;
+        
+     }
 }
 /*END FirstBlock*/
  .block2 {
