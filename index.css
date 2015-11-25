@@ -168,6 +168,16 @@
         
      }
 }
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .menu {
+        display:none;
+    }
+     .block1 {
+        height:200px;
+        background-size:100% 100%;
+    }
+}
 /*END FirstBlock*/
  .block2 {
     font-size:1.5em;
