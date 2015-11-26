@@ -1,199 +1,115 @@
-/*Responsive web layout*/
- body {
-    margin:0 0;
-    padding: 0 0;
-    font-family: Impact, Charcoal, sans-serif;
-    
-}
-* {
-    box-sizing: border-box;
-}
-.row:after {
-    content:"";
-    clear: both;
-    display: block;
-}
-[class*="col-"] {
-    float: left;
-}
-/* set up collums */
- .col-1 {
-    width: 8.33%;
-}
-.col-2 {
-    width: 16.66%;
-}
-.col-3 {
-    width: 25%;
-}
-.col-4 {
-    width: 33.33%;
-}
-.col-5 {
-    width: 41.66%;
-}
-.col-6 {
-    width: 50%;
-}
-.col-7 {
-    width: 58.33%;
-}
-.col-8 {
-    width: 66.66%;
-}
-.col-9 {
-    width: 75%;
-}
-.col-10 {
-    width: 83.33%;
-}
-.col-11 {
-    width: 91.66%;
-}
-.col-12 {
-    width: 100%;
-}
-@media only screen and (max-width: 600px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-}
 /*END Responsive web layout*/
 
-/* FirstBlock*/
- .block1 {
-    height:825px;
-    background-image: url("https://cloud.githubusercontent.com/assets/15953484/11393488/e9815f1a-932d-11e5-90d2-5128121f3400.jpg");
-    background-repeat:no-repeat;
-    background-size:100% auto;
+/*section1*/
+.section1{
+  
+  background-image: url("https://cloud.githubusercontent.com/assets/15953484/11427347/17c2043a-9430-11e5-9d25-de80cee38858.jpg");
+  background-repeat: no-repeat;
+  background-size:auto 100%;
+  height:600px;
 
+    box-shadow:0px 0px 20px 3px black;
 }
-.block1 #name {
-    list-style-type: none;
-    font-size:3em;
-    color:#f2f2f2;
-    text-shadow:5px 5px 5px black;
-    margin-left:5%;
-    float: left;
+@media only screen and (max-width: 1100px) {
+    .section1{
+      background-size:cover;
+      height:325px;
+   
+  }
 }
-
-    /*button*/
-.menu {
-    position:absolute;
+/*Nav Button*/
+ .menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
-    float:right;
-    right:1%;
-    
+    font-size:1.3em;
+    display:block;
+    position:relative;
+    float:left;
+    left:1%;
 }
 .menu li {
-    
-    
+
 }
-.menu a {
-    display: block;
-    padding:15px;
-    width:100%;
-    
-}
-.menu span {
-    display: block;
-    padding:5px;
-    width:100%;
-    font-size:3em;
-}
-.menu > li:hover .drop li {
-    display:block;
-    
-}
-.menu li > a:hover{
-    color:black;
-    background-color: #ffc34d;
-    
-}
-.drop {
-    position:relative;
+.hidden {
     list-style-type: none;
     margin: 0;
-    padding:2px 0;
-    text-align: justify;
-    
-    
+    padding: 0;
+ position:absolute;
+ 
 }
-.drop li {
-    display:none;
-    
+.hidden li {
+ 
 }
-.button1 {
-    color: white;
-    font-size:2em;
-    font-family:"Lucida Console", Monaco, monospace;
+a {
+    display:block;
     text-decoration: none;
-    background-color: transparent;
-    box-shadow: 0 8px 16px 0 black;
-    border:none;
+    color:#cccccc;
     border-radius:5px;
-    transition-duration: 1s;
+    background-color: transparent;
+    box-shadow:0px 0px 20px .5px white;
+    padding:8px;
+    margin:10px 0 0 0;
+    text-align:center;
+}
+.hidden li a {
+    opacity: 0;
+    transition: all 1s;
+}
+a:hover{
+background-color:#737373;
+}
+.menu li:hover .hidden li a {
+    opacity: 1;
     
 }
-/*end button*/
+/*end Nav Button*/
+/*sidewall*/
+.sidewall {
+    font-size:1.6em;
+    
+    white-space: nowrap;
+    position:absolute;
+    width:38px;
+    top:1%;
+    right:0%;
+    transition: all 1s;
+    overflow:hidden;
+    text-overflow:clip;
+}
 
-/*end block*/
-@media only screen and (max-width: 1400px) {
-    /* For mobile phones: */
-    .block1 {
-        height:625px;
-        
-    }
+.sidewall:hover {
+    width:330px;
+}
+.sidewall .span1{
+    
+    color:blue;
+}
+.sidewall .span2{
+    
+    color:#cccccc;
+    
 }
 @media only screen and (max-width: 900px) {
-    /* For mobile phones: */
-    .block1 {
-        height:300px;
-        background-size:100% 100%;
-    }
-    .menu{
-       position:absolute;
-       float:left;
-       top:2%;
-     }
-     #name{
-        position:relative;
-        left:0%;
-        margin:0;
-        padding:0;
-        
-     }
+  .sidewall {
+    font-size:1.4em;
+    top:10%;
+    width:25px;
+    
+  }
+  .sidewall:hover {
+    width:260px;
 }
-@media only screen and (max-width: 600px) {
-    /* For mobile phones: */
-    .menu {
-        display:none;
-    }
-     .block1 {
-        height:200px;
-        background-size:100% 100%;
-    }
+  .sidewall .span2{
+    
+    
+    text-shadow: 2px 2px black;
 }
-/*END FirstBlock*/
- .block2 {
+}
+/* endsidewall*/
+.section2 {
     font-size:1.5em;
     font-family:"Courier New", Courier, monospace;
     text-align: center;
     padding:0 20px;
-}
-.block3 {
-    font-size:1.5em;
-    font-family:"Courier New", Courier, monospace;
-    text-align: center;
-    padding:30px 20px;
-    background-color:#e6e6e6;
-}
-.block3 img {
-    max-width: 100%;
-    height: 160px;
-    border-radius:20%;
 }
