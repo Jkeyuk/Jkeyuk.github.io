@@ -64,7 +64,7 @@
  .section1 {
     background-image: url("https://cloud.githubusercontent.com/assets/15953484/11427347/17c2043a-9430-11e5-9d25-de80cee38858.jpg");
     background-repeat: no-repeat;
-    background-size:auto 100%;
+    background-size:cover;
     height:600px;
     box-shadow:0px 0px 20px 3px black;
 }
@@ -79,7 +79,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size:1.3em;
     display:block;
     position:relative;
     float:left;
@@ -95,22 +94,26 @@
 }
 .hidden li {
 }
-a {
+.button {
+    font-size:1.2em;
+    font-weight: 700;
     display:block;
     text-decoration: none;
-    color:#cccccc;
+    color:#0066ff;
     border-radius:5px;
     background-color: transparent;
     box-shadow:0px 0px 20px .5px white;
-    padding:8px;
+    padding:10px;
     margin:10px 0 0 0;
     text-align:center;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    /* Safari */
 }
 .hidden li a {
     opacity: 0;
-    transition: all 1s;
 }
-a:hover {
+.button:hover {
     background-color:#737373;
 }
 .menu li:hover .hidden li a {
@@ -120,36 +123,42 @@ a:hover {
 
 /*sidewall*/
  .sidewall {
+    padding: 5px;
     font-size:1.6em;
     white-space: nowrap;
     position:absolute;
-    width:38px;
+    width:35px;
     top:1%;
     right:0%;
     transition: all 1s;
+    -webkit-transition: all 1s;
+    /* Safari */
     overflow:hidden;
     text-overflow:clip;
 }
 .sidewall:hover {
+    box-shadow:0px 0px 20px .5px white;
     width:330px;
 }
 .sidewall .span1 {
-    color:blue;
+    color:#0066ff;
+    text-shadow: 2px 1px black;
 }
 .sidewall .span2 {
-    color:#cccccc;
+    font-weight: 800;
+    color:#0066ff;
+    text-shadow: 2px 1px black;
 }
 @media only screen and (max-width: 900px) {
     .sidewall {
         font-size:1.4em;
         top:10%;
-        width:25px;
+        width:290px;
     }
     .sidewall:hover {
-        width:260px;
+        width:290px;
     }
     .sidewall .span2 {
-        text-shadow: 2px 2px black;
     }
 }
 /* endsidewall*/
@@ -158,4 +167,17 @@ a:hover {
     font-family:"Courier New", Courier, monospace;
     text-align: center;
     padding:0 20px;
+}
+.block3 {
+    font-size:1.5em;
+    font-family:"Courier New", Courier, monospace;
+    text-align: center;
+    padding:60px;
+    background-color:#e6e6e6;
+    box-shadow:0px 2px 20px -2px inset;
+}
+.block3 img {
+    max-width: 100%;
+    height: 160px;
+    border-radius:20%;
 }
