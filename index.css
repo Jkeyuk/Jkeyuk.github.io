@@ -3,6 +3,7 @@
     margin:0 0;
     padding: 0 0;
     font-family:"Courier New", Courier, monospace;
+    
 }
 * {
     box-sizing: border-box;
@@ -59,9 +60,53 @@
     }
 }
 /*END Responsive web layout*/
+/*Front Doors*/
+ .wrap {
+    position:absolute;
+    
+    box-sizing: border-box;
+    height:86%;
+    width:100%;
+}
+#open1 {
+    box-sizing: border-box;
+    position:absolute;
+    background-color:blue;
+    height:100%;
+    width:100%;
+    transition: all 1s;
+    top:0%;
+    z-index:95;
+}
+#open2 {
+    box-sizing: border-box;
+    position:absolute;
+    background-color:blue;
+    height:100%;
+    width:100%;
+    right:0%;
+    transition: all 1s;
+    top:0%;
+    z-index:95;
+}
+#button {
+    position:absolute;
+    background-color:blue;
+    border: none;
+    border-radius: 50%;
+    box-shadow:3px 3px 15px 0px black;
+    padding:15px;
+    color: white;
+    font-size: 4em;
+    top:40%;
+    right:45%;
+    z-index:99;
+}
+/*End front doors*/
 
 /*section1*/
  .section1 {
+   
     background-image: url("https://cloud.githubusercontent.com/assets/15953484/11427347/17c2043a-9430-11e5-9d25-de80cee38858.jpg");
     background-repeat: no-repeat;
     background-size:cover;
@@ -79,6 +124,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+  
     display:block;
     position:relative;
     float:left;
@@ -95,7 +141,7 @@
 .hidden li {
 }
 .button {
-    font-size:1.2em;
+  font-size:1.2em;
     font-weight: 700;
     display:block;
     text-decoration: none;
@@ -107,11 +153,11 @@
     margin:10px 0 0 0;
     text-align:center;
     transition: all 1s;
-    -webkit-transition: all 1s;
-    /* Safari */
+    -webkit-transition: all 1s; /* Safari */
 }
 .hidden li a {
     opacity: 0;
+   
 }
 .button:hover {
     background-color:#737373;
@@ -123,6 +169,7 @@
 
 /*sidewall*/
  .sidewall {
+    
     padding: 5px;
     font-size:1.6em;
     white-space: nowrap;
@@ -131,8 +178,7 @@
     top:1%;
     right:0%;
     transition: all 1s;
-    -webkit-transition: all 1s;
-    /* Safari */
+    -webkit-transition: all 1s; /* Safari */
     overflow:hidden;
     text-overflow:clip;
 }
@@ -156,9 +202,11 @@
         width:290px;
     }
     .sidewall:hover {
-        width:290px;
+    width:290px;
+
     }
     .sidewall .span2 {
+        
     }
 }
 /* endsidewall*/
@@ -166,16 +214,16 @@
     font-size:1.5em;
     font-family:"Courier New", Courier, monospace;
     text-align: center;
-    padding:20px;
+    padding: 20px;
     box-shadow: 0px -4px 20px -5px inset;
 }
 .block3 {
     font-size:1.5em;
     font-family:"Courier New", Courier, monospace;
     text-align: center;
-    padding:60px;
+    padding:50px 0 0 0;
     background-color:#e6e6e6;
-    
+   
 }
 .block3 img {
     max-width: 100%;
