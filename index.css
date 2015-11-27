@@ -152,7 +152,7 @@
 @media only screen and (max-width: 900px) {
     .sidewall {
         font-size:1.4em;
-        top:10%;
+        top:15%;
         width:290px;
     }
     .sidewall:hover {
