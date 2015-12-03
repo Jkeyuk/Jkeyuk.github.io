@@ -195,6 +195,24 @@
     .menu li:hover .hidden li {
       opacity: 1;
     }
+    @media only screen and (max-width: 900px) {
+   .menu {
+     position: relative;
+   }
+   .menu li {
+     display: inline;
+   }
+   .hidden {
+     display: inline;
+     position: relative;
+   }
+   .hidden li {
+     opacity: 1;
+   }
+   .button {
+     display: inline;
+   }
+ }
     /*end Nav Button*/
     /*sidewall*/
     
@@ -231,15 +249,15 @@
     }
     
     @media only screen and (max-width: 900px) {
-      #sidewall {
-        font-size: 1.4em;
-        top: 70px;
-        width: 290px;
-      }
-      #sidewall:hover {
-        width: 290px;
-      }
-    }
+   #sidewall {
+     position: relative;
+     
+     width: 290px;
+   }
+   #sidewall:hover {
+     width: 290px;
+   }
+ }
     /* endsidewall*/
     
     .section2 {
