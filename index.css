@@ -196,22 +196,10 @@
       opacity: 1;
     }
     @media only screen and (max-width: 900px) {
-   .menu {
-     
-   }
-   .menu li {
-     display: inline;
-   }
-   .hidden {
-     display: inline;
-     position: relative;
-   }
    .hidden li {
      opacity: 1;
    }
-   .button {
-     display: inline;
-   }
+   
  }
     /*end Nav Button*/
     /*sidewall*/
@@ -250,7 +238,7 @@
     
     @media only screen and (max-width: 900px) {
    #sidewall {
-    top:120px;
+    top:150px;
      width: 290px;
    }
    #sidewall:hover {
