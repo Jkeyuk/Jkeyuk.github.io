@@ -197,7 +197,7 @@
     }
     @media only screen and (max-width: 900px) {
    .menu {
-     position: relative;
+     
    }
    .menu li {
      display: inline;
