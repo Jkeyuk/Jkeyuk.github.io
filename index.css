@@ -233,7 +233,7 @@
     @media only screen and (max-width: 900px) {
       #sidewall {
         font-size: 1.4em;
-        top: 50px;
+        top: 70px;
         width: 290px;
       }
       #sidewall:hover {
