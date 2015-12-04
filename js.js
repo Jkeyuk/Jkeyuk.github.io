@@ -1,3 +1,13 @@
+//event handlers
+//NAV button handler
+var button = document.getElementsByClassName("button");
+button[1].addEventListener('click', buttonColor, false);
+button[1].addEventListener('click', sidebarColor, false);
+button[0].addEventListener('click', navB, false);
+//opendoors event handler
+var doors = document.getElementById("button");
+doors.addEventListener('click', myDoor, false);
+//END event handlers
 //opendoors functions
 function myDoor() {
         document.getElementById("open1").style.width = "0px";
