@@ -57,15 +57,19 @@ function buttonColor() {
 }
 //end color section one change
 //BACKGROUND PICTURE CHANGE FUNCTION
+var w = 0;
+
 function backGround() {
     var x = document.getElementById("section1");
     var pic1 =
         'url(https://cloud.githubusercontent.com/assets/15953484/11427347/17c2043a-9430-11e5-9d25-de80cee38858.jpg)';
     var pic2 =
         'url(https://cloud.githubusercontent.com/assets/15953484/11606230/d4814672-9ae7-11e5-8cba-0e7504037070.jpg)';
-    if (x.style.backgroundImage == pic2) {
-        x.style.backgroundImage = pic1;
-    } else {
+    if (w == 0) {
         x.style.backgroundImage = pic2;
+        w = 1;
+    } else {
+        x.style.backgroundImage = pic1;
+        w = 0;
     }
 }
