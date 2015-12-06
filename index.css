@@ -1,11 +1,15 @@
-/*Responsive web layout*/
+/*RESPONSIVE GRID LAYOUT ********************************/
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-* {
-    box-sizing: border-box;
+[class*="col-"] {
+    float: left;
 }
 
 .row:after {
@@ -14,11 +18,6 @@ body {
     display: block;
 }
 
-[class*="col-"] {
-    float: left;
-}
-
-/* set up collums */
 .col-1 {
     width: 8.33%;
 }
@@ -67,193 +66,121 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
-}
-
-/*END Responsive web layout*/
-/*Front Doors*/
-.wrap {
-    position: relative;
-    height: 100%;
-    width: 100%;
+/*END END RESPONSIVE GRID LAYOUT ********************************/
+/*NAV BAR ********************************/
+#NavWrap {
+    position: fixed;
+    z-index: 1;
+    transition: all .5s;
+    -webkit-transition: all .5s;
 }
 
-#open1 {
-    box-sizing: border-box;
-    position: absolute;
-    background-color: #333;
-    height: 100%;
-    width: 50%;
-    transition: all 1s;
-    top: 0;
-    z-index: 95;
-    opacity: .8;
+#NavWrap:hover {
+    background-color: #595959;
 }
 
-#open2 {
-    box-sizing: border-box;
-    position: absolute;
-    background-color: #333;
-    height: 100%;
-    width: 50%;
-    right: 0;
-    transition: all 1s;
-    top: 0;
-    z-index: 95;
-    opacity: .8;
-}
-
-#button {
-    position: absolute;
-    background-color: blue;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 3px 3px 15px 0 #000;
-    padding: 20px;
-    color: #fff;
-    font-size: 4em;
-    font-family: 'Century Gothic',CenturyGothic,AppleGothic,sans-serif;
-    top: 40%;
-    right: 46%;
-    z-index: 99;
-}
-
-/*End front doors*/
-/*section1*/
-#section1 {
-    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11427347/17c2043a-9430-11e5-9d25-de80cee38858.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    box-shadow: 0 0 20px 3px #000;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-}
-
-@media only screen and (max-width: 1100px) {
-#section1 {
-    background-size: cover;
-    height: 325px;
-}
-}
-
-/*Nav Button*/
-.menu {
+#NavWrap ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 2% 0 0;
     padding: 0;
-    display: block;
-    position: absolute;
+}
+
+#NavWrap li {
     float: left;
-    left: 1%;
-    top: 1%;
 }
 
-.hidden {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-}
-
-.button {
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: 'Century Gothic',CenturyGothic,AppleGothic,sans-serif;
-    display: block;
+#NavWrap li button {
     text-decoration: none;
-    color: #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    box-shadow: 0 0 20px .5px #fff;
-    padding: 10px;
-    margin: 10px 0 0;
-    text-align: center;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-/* Safari */
-}
-
-.hidden li {
-    display: none;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-/* Safari */
-}
-
-.button:hover {
-    background-color: #737373;
-}
-
-/*end Nav Button*/
-/*sidewall*/
-#sidewall {
-    font-family: 'Century Gothic',CenturyGothic,AppleGothic,sans-serif;
-    padding: 5px;
+    display: block;
     font-size: 1.6em;
-    white-space: nowrap;
-    position: absolute;
-    width: 32px;
-    top: 1%;
-    right: 0;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-/* Safari */
-    overflow: hidden;
-    text-overflow: clip;
+    font-family: "Courier New",Courier,monospace;
+    font-weight: 200;
+    color: #e6e6e6;
+    background-color: transparent;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all .5s;
+    -webkit-transition: all .5s;
 }
 
-#sidewall:hover {
-    box-shadow: 0 0 20px .5px #fff;
-    width: 330px;
+#NavWrap li button:hover {
+    box-shadow: 0 2px 4px #000;
 }
 
-#sidewall #span1 {
-    color: #fff;
-    text-shadow: 2px 1px #000;
+#NavWrap li button:focus {
+    outline: none;
 }
 
-#sidewall #span2 {
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 2px 1px #000;
+#RightSide {
+    float: right;
 }
 
-@media only screen and (max-width: 500px) {
-#sidewall {
-    display: none;
-    width: 0;
+/*END END NAV BAR ********************************/
+/*SECTION 1 ********************************/
+#FixedImage {
+    position: fixed;
+    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    z-index: -1;
 }
 
-#sidewall:hover {
-    width: 0;
-}
-}
-
-/* endsidewall*/
-.section2 {
-    font-size: 1.5em;
+#FixedImage h2 {
+    position: relative;
+    color: #e6e6e6;
+    text-shadow: 2px 2px 2px #000;
+    font-size: 4em;
     font-family: "Courier New",Courier,monospace;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 -4px 20px -5px inset;
+    top: 25%;
 }
 
-.block3 {
-    font-size: 1.5em;
+/*SECTION 2 ********************************/
+#Skills {
+    background-color: #33baff;
+    position: relative;
+    height: 680px;
+    top: 690px;
     font-family: "Courier New",Courier,monospace;
-    text-align: center;
-    padding: 50px 0 0;
-    background-color: #e6e6e6;
-    height: 400px;
 }
 
-.block3 img {
-    max-width: 100%;
-    height: 160px;
-    border-radius: 20%;
+#Skills h2 {
+    padding: 10px 0;
+    font-size: 2.5em;
+    text-align: center;
+    color: #fff;
+}
+
+#Skills ul {
+    list-style-type: none;
+}
+
+#Skills li {
+    padding: 6px 15px;
+    font-size: 2.5em;
+    color: #fff;
+    text-align: left;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+    box-shadow: 2px 2px 15px #000;
+}
+
+progress::-webkit-progress-bar {
+/* style rules */
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+/* style rules */
+    background-color: #6f3;
+    border-radius: 5px;
 }
