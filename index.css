@@ -80,9 +80,7 @@ body {
     -webkit-transition: all .5s;
 }
 
-#NavWrap:hover {
-    background-color: #595959;
-}
+
 
 #NavWrap ul {
     list-style-type: none;
@@ -111,6 +109,7 @@ body {
 
 #NavWrap li button:hover {
     box-shadow: 0 2px 4px #000;
+    background-color: grey;
 }
 
 #NavWrap li button:focus {
