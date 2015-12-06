@@ -65,6 +65,11 @@ body {
 .col-12 {
     width: 100%;
 }
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 
 /*END END RESPONSIVE GRID LAYOUT ********************************/
 /*NAV BAR ********************************/
@@ -136,7 +141,13 @@ body {
     text-align: center;
     top: 25%;
 }
-
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #FixedImage {
+    background-size: cover;
+    height: 300px;
+    
+}
 /*SECTION 2 ********************************/
 #Skills {
     background-color: #33baff;
