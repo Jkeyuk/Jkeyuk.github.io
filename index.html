@@ -2,59 +2,39 @@
 <html>
 <head>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>HTML+CSS+Now With Javascript</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <title>DecProject</title>
+    <link href="project.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="row">
-        <!--First Section-->
-        <div class="col-12" id="section1">
-            <!--front doors-->
-            <div class="wrap">
-                <button id="button" type="button">JK</button>
-                <div id="open1"></div>
-                <div id="open2"></div>
-            </div><!--End front doors-->
-            <ul class="menu">
-                <li>
-                    <button class="button">JK Development &#9660;</button>
-                    <ul class="hidden">
-                        <li><button class="button">Text Color</button></li>
-                        <li><button class="button">Image</button></li>
-                    </ul>
-                </li>
-            </ul><!--sidewall-->
-            <div id="sidewall">
-                <span id="span1">&#9762;</span> <span id="span2">Simple
-                Interfaces</span><br>
-                <span id="span1">&#9874;</span> <span id="span2">Custom
-                Designs</span><br>
-                <span id="span1">&#9774;</span> <span id="span2">Mobile
-                Friendly</span><br>
-                <span id="span1">&#9730;</span> <span id="span2">Sliding
-                Stuff</span>
-            </div><!--end sidewall-->
-        </div><!--end First Section-->
-        <!--second Section-->
-        <div class="col-12 section2">
-            <p>Hi, my name is Jonathan. I'm a aspiring web developer learning
-            HTML, CSS, and Java Script. Eventually I will learn PHP SQL.</p>
-        </div><!--end second Section-->
-        <!--third Section-->
-        <div class="col-6 block3">
-            <img src=
-            "https://cloud.githubusercontent.com/assets/15953484/11393491/f401c0b0-932d-11e5-92f9-597c7402022f.png">
-            <p>Complete custom designs. Built from scratch to be responsive on
-            multiple devices.</p>
+        <!--NAV BAR **********-->
+        <div class="col-12" id="NavWrap">
+            <ul>
+                <li><button id="LogoButton">Logo</button></li>
+            </ul>
+            <ul id="RightSide">
+                <li><button id="SkillsButton">SKILLS</button></li>
+            </ul>
+        </div><!--END END NAV BAR **********-->
+        <!--SECTION1 **********-->
+        <div class="col-12" id="FixedImage">
+            <h2>JK DEVELOPMENT</h2>
+        </div><!--SECTION2 **********-->
+        <div class="col-12" id="Skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>HTML</li>
+                <li><progress max="100" value="50"></progress></li>
+                <li>CSS</li>
+                <li><progress max="100" value="40"></progress></li>
+                <li>JAVA SCRIPT</li>
+                <li><progress max="100" value="25"></progress></li>
+                <li>PHP</li>
+                <li><progress max="100" value="0"></progress></li>
+            </ul>
         </div>
-        <div class="col-6 block3">
-            <img src=
-            "https://cloud.githubusercontent.com/assets/15953484/11393493/f9ba2006-932d-11e5-810b-d9c14e956909.jpg">
-            <p>Using the latest techniques and methods of HTML5, CSS3, and Java
-            Script</p>
-        </div><!--end third Section-->
     </div>
-    <script src="js.js">
+    <script src="project.js">
     </script>
 </body>
 </html>
