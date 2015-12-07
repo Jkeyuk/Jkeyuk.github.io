@@ -6,17 +6,17 @@ var skillsButton = document.getElementById("SkillsButton");
 skillsButton.addEventListener('click', scrollToSkills, false);
 
 function scrollToSkills() {
-	var pos = 0;
+    var pos = 0;
     var id = setInterval(frame, 1);
+
     function frame() {
-        if (pos == 690) {
+        if (pos >= 760) {
             clearInterval(id);
         } else {
-            pos+=6; 
+            pos += 6;
             window.scrollTo(0, pos);
         }
     }
-    
 };
 
 function logoButtonfunction() {
