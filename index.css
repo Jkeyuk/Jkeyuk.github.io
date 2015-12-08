@@ -67,10 +67,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
 
 /*END END RESPONSIVE GRID LAYOUT ********************************/
@@ -84,7 +84,7 @@ body {
 
 #NavWrap ul {
     list-style-type: none;
-    margin: 5px 2px;
+    margin: 5px 2%;
     padding: 0;
 }
 
@@ -102,6 +102,7 @@ body {
     background-color: transparent;
     border: none;
     padding: 10px 15px;
+    text-decoration: none;
     transition: all .5s;
     -webkit-transition: all .5s;
 }
@@ -118,17 +119,17 @@ body {
     float: right;
 }
 
-@media only screen and (max-width: 600px) {
-#NavWrap {
-    z-index: 0;
-}
+@media only screen and (max-width: 400px) {
+    #NavWrap {
+        z-index: 0;
+    }
 }
 
 /*END END NAV BAR ********************************/
 /*SECTION 1 ********************************/
 #FixedImage {
     position: fixed;
-    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
+    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -146,13 +147,13 @@ body {
 }
 
 @media only screen and (max-width: 520px) {
-#FixedImage {
-    background-size: 100% 100%;
-}
+    #FixedImage {
+        background-size: 100% 100%;
+    }
 
-#FixedImage h2 {
-    font-size: 2em;
-}
+    #FixedImage h2 {
+        font-size: 2em;
+    }
 }
 
 /*SECTION 2 ********************************/
@@ -183,15 +184,15 @@ body {
 }
 
 @media only screen and (max-width: 1400px) {
-#Skills {
-    top: 740px;
-}
+    #Skills {
+        top: 740px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-#Skills li {
-    font-size: 1.5em;
-}
+    #Skills li {
+        font-size: 1.5em;
+    }
 }
 
 progress {
@@ -213,4 +214,65 @@ progress::-webkit-progress-value {
 /* style rules */
     background-color: #6f3;
     border-radius: 5px;
+}
+
+/*SECTION 3 ********************************/
+#About {
+    padding: 10px 10%;
+    position: relative;
+    top: 960px;
+    background-color: #00E38C;
+    text-align: center;
+    font-size: 2.3em;
+    color: #fff;
+    font-family: "Courier New",Courier,monospace;
+    box-shadow: 0 3px 15px #000 inset;
+}
+
+@media only screen and (max-width: 1400px) {
+    #About {
+        top: 740px;
+    }
+}
+
+/*SECTION 4 ********************************/
+#ServicesHead {
+    position: relative;
+    top: 960px;
+    color: #fff;
+    text-shadow: 3px 3px 9px #000;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #0cf;
+    font-family: "Courier New",Courier,monospace;
+    padding: 0 2%;
+}
+
+#Services {
+    position: relative;
+    height: 450px;
+    top: 960px;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    background-color: #0cf;
+    font-family: "Courier New",Courier,monospace;
+    padding: 10px 4%;
+}
+
+#Services img {
+    box-shadow: 2px 3px 15px #000;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 20%;
+}
+
+@media only screen and (max-width: 1400px) {
+    #ServicesHead {
+        top: 740px;
+    }
+
+    #Services {
+        top: 740px;
+    }
 }
