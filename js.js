@@ -10,15 +10,34 @@ function scrollToSkills() {
     var id = setInterval(frame, 1);
 
     function frame() {
-        if (pos >= 760) {
-            clearInterval(id);
+        if (window.innerWidth < 1400) {
+            if (pos >= 750) {
+                clearInterval(id);
+            } else {
+                pos += 5;
+                window.scrollTo(0, pos);
+            }
         } else {
-            pos += 6;
-            window.scrollTo(0, pos);
+            if (pos >= 970) {
+                clearInterval(id);
+            } else {
+                pos += 6;
+                window.scrollTo(0, pos);
+            }
         }
     }
-};
+}
 
 function logoButtonfunction() {
-    window.scrollTo(0, 0);
+    var pos = window.pageYOffset;
+    var id = setInterval(frame, 1);
+
+    function frame() {
+        if (pos <= 0) {
+            clearInterval(id);
+        } else {
+            pos -= 5;
+            window.scrollBy(0, -5);
+        }
+    }
 }
