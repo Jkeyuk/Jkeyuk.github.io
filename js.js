@@ -1,7 +1,15 @@
-//event handlers
-//NAV button handler
-var logoButton = document.getElementById("LogoButton");
-logoButton.addEventListener('click', logoButtonfunction, false);
+//NAV BUTTON ******************************************
+var navButton = document.getElementById("NavButton");
+navButton.addEventListener('click', showMenu, false);
+
+function showMenu() {
+        if (skillsButton.style.bottom == "0px") {
+            skillsButton.style.bottom = "70px";
+        } else {
+            skillsButton.style.bottom = "0px";
+        }
+    }
+    //SKILLS BUTTON ******************************************
 var skillsButton = document.getElementById("SkillsButton");
 skillsButton.addEventListener('click', scrollToSkills, false);
 
@@ -26,9 +34,10 @@ function scrollToSkills() {
             }
         }
     }
+    skillsButton.style.bottom = "70px";
 }
 
-function logoButtonfunction() {
+function scrollToTop() {
     var pos = window.pageYOffset;
     var id = setInterval(frame, 1);
 
