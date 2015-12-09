@@ -84,7 +84,7 @@ body {
 
 #NavWrap ul {
     list-style-type: none;
-    margin: 5px 2%;
+    margin: 5px;
     padding: 0;
 }
 
@@ -94,8 +94,8 @@ body {
 
 #NavWrap li button {
     text-decoration: none;
-    display: block;
-    font-size: 1.6em;
+    display: inline-block;
+    font-size: 2em;
     font-family: "Courier New",Courier,monospace;
     font-weight: 200;
     color: #e6e6e6;
@@ -115,8 +115,9 @@ body {
     outline: none;
 }
 
-#RightSide {
-    float: right;
+#SkillsButton {
+    position: relative;
+    bottom: 70px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -129,7 +130,7 @@ body {
 /*SECTION 1 ********************************/
 #FixedImage {
     position: fixed;
-    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
+    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -231,6 +232,7 @@ progress::-webkit-progress-value {
 
 @media only screen and (max-width: 1400px) {
     #About {
+        font-size: 1.5em;
         top: 740px;
     }
 }
@@ -257,7 +259,7 @@ progress::-webkit-progress-value {
     font-size: 2em;
     background-color: #0cf;
     font-family: "Courier New",Courier,monospace;
-    padding: 10px 4%;
+    padding: 10px 10%;
 }
 
 #Services img {
@@ -274,5 +276,6 @@ progress::-webkit-progress-value {
 
     #Services {
         top: 740px;
+        font-size: 1.5em;
     }
 }
