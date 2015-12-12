@@ -95,7 +95,7 @@ body {
 
 #NavWrap li .button {
     cursor: pointer;
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-size: 1.5em;
     height: 45px;
