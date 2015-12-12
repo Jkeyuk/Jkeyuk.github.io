@@ -90,7 +90,7 @@ body {
 
 #NavWrap li {
     float: left;
-    padding: 0 1px;
+    padding: 1px 1px;
     overflow:hidden;
 }
 
