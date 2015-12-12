@@ -94,14 +94,14 @@ body {
 
 #NavWrap li button {
     text-decoration: none;
-    display: inline-block;
-    font-size: 2em;
-    font-family: "Courier New",Courier,monospace;
+    font-size: 1.5em;
+    height: 50px;
+    font-family: 'Play',serif;
     font-weight: 200;
     color: #e6e6e6;
     background-color: transparent;
     border: none;
-    padding: 10px 15px;
+    padding: 6px 12px;
     text-decoration: none;
     transition: all .5s;
     -webkit-transition: all .5s;
@@ -141,12 +141,92 @@ body {
     position: relative;
     color: #e6e6e6;
     text-shadow: 0 0 12px #000;
-    font-size: 4em;
-    font-family: "Courier New",Courier,monospace;
+    font-size: 3em;
+    font-family: 'Play',serif;
     text-align: center;
     top: 25%;
 }
 
+/*SVG logo CSS*/
+#jkLogo {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    right: 1%;
+}
+
+#jkCircle {
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-name: pulse;
+    -ms-animation-duration: 6s;
+    -ms-animation-iteration-count: infinite;
+    animation-name: pulse;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        stroke-dasharray: 30 15;
+    }
+
+    50% {
+        stroke-dasharray: 0 25;
+    }
+
+    100% {
+        stroke-dasharray: 30 15;
+    }
+}
+
+@-moz-keyframes pulse {
+    0% {
+        stroke-dasharray: 30 15;
+    }
+
+    50% {
+        stroke-dasharray: 0 25;
+    }
+
+    100% {
+        stroke-dasharray: 30 15;
+    }
+}
+
+@-ms-keyframes pulse {
+    0% {
+        stroke-dasharray: 30 15;
+    }
+
+    50% {
+        stroke-dasharray: 0 25;
+    }
+
+    100% {
+        stroke-dasharray: 30 15;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        stroke-dasharray: 30 15;
+    }
+
+    50% {
+        stroke-dasharray: 0 25;
+    }
+
+    100% {
+        stroke-dasharray: 30 15;
+    }
+}
+
+/*END END SVG logo CSS*/
 @media only screen and (max-width: 520px) {
     #FixedImage {
         background-size: 100% 100%;
@@ -162,7 +242,7 @@ body {
     background-color: #33baff;
     position: relative;
     top: 960px;
-    font-family: "Courier New",Courier,monospace;
+    font-family: 'Play',serif;
 }
 
 #Skills h2 {
@@ -226,7 +306,7 @@ progress::-webkit-progress-value {
     text-align: center;
     font-size: 2.3em;
     color: #fff;
-    font-family: "Courier New",Courier,monospace;
+    font-family: 'Play',serif;
     box-shadow: 0 3px 15px #000 inset;
 }
 
@@ -246,7 +326,7 @@ progress::-webkit-progress-value {
     text-align: center;
     font-size: 1.5em;
     background-color: #0cf;
-    font-family: "Courier New",Courier,monospace;
+    font-family: 'Play',serif;
     padding: 0 2%;
 }
 
@@ -258,7 +338,7 @@ progress::-webkit-progress-value {
     text-align: center;
     font-size: 2em;
     background-color: #0cf;
-    font-family: "Courier New",Courier,monospace;
+    font-family: 'Play',serif;
     padding: 10px 10%;
 }
 
