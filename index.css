@@ -138,7 +138,7 @@ body {
 /*SECTION 1 ********************************/
 #FixedImage {
     position: fixed;
-    background-image: url(background.jpg);
+    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
