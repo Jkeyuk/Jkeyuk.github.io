@@ -91,6 +91,7 @@ body {
 #NavWrap li {
     float: left;
     padding: 0 1px;
+    overflow:hidden;
 }
 
 #NavWrap li .button {
