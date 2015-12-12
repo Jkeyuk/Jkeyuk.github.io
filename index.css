@@ -90,32 +90,40 @@ body {
 
 #NavWrap li {
     float: left;
+    padding: 0 1px;
 }
 
-#NavWrap li button {
+#NavWrap li .button {
+    cursor: pointer;
+    display: block;
     text-decoration: none;
     font-size: 1.5em;
-    height: 50px;
+    height: 45px;
     font-family: 'Play',serif;
     font-weight: 200;
     color: #e6e6e6;
-    background-color: transparent;
+    background-color: #0079cc;
+    border-radius: 5%;
     border: none;
-    padding: 6px 12px;
-    text-decoration: none;
+    padding: 2px 10px;
     transition: all .5s;
     -webkit-transition: all .5s;
 }
 
-#NavWrap li button:hover {
+#NavWrap li .button:hover {
     box-shadow: 0 0 15px 3px #fff;
 }
 
-#NavWrap li button:focus {
+#NavWrap li .button:focus {
     outline: none;
 }
 
 #SkillsButton {
+    position: relative;
+    bottom: 70px;
+}
+
+#codePen {
     position: relative;
     bottom: 70px;
 }
@@ -130,7 +138,7 @@ body {
 /*SECTION 1 ********************************/
 #FixedImage {
     position: fixed;
-    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
+    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -152,7 +160,7 @@ body {
     position: absolute;
     width: 75px;
     height: 75px;
-    right: 0%;
+    right: 0;
 }
 
 #jkCircle {
@@ -276,25 +284,35 @@ body {
     }
 }
 
-progress {
-    -webkit-appearance: none;
-    appearance: none;
-    border-radius: 5px;
-    height: 20px;
-    width: 90%;
+.bar {
+    background-color: #fff;
+    border-radius: 10px 10px;
+    max-width: 90%;
+    height: 1em;
     box-shadow: 2px 2px 15px #000;
 }
 
-progress::-webkit-progress-bar {
-/* style rules */
-    background-color: #f3f3f3;
-    border-radius: 5px;
+.innerBar {
+    background-color: #0f0;
+    box-shadow: 2px 0 2px grey;
+    border-radius: 10px 10px;
+    height: 100%;
 }
 
-progress::-webkit-progress-value {
-/* style rules */
-    background-color: #6f3;
-    border-radius: 5px;
+.n65 {
+    max-width: 65%;
+}
+
+.n55 {
+    max-width: 55%;
+}
+
+.n35 {
+    max-width: 35%;
+}
+
+.n0 {
+    max-width: 0;
 }
 
 /*SECTION 3 ********************************/
