@@ -90,8 +90,8 @@ body {
 
 #NavWrap li {
     float: left;
-    padding: 1px 1px;
-    overflow:hidden;
+    padding: 1px;
+    overflow: hidden;
 }
 
 #NavWrap li .button {
@@ -250,7 +250,6 @@ body {
 #Skills {
     background-color: #33baff;
     position: relative;
-    top: 960px;
     font-family: 'Play',serif;
 }
 
@@ -271,12 +270,6 @@ body {
     font-size: 2.5em;
     color: #fff;
     text-align: left;
-}
-
-@media only screen and (max-width: 1400px) {
-    #Skills {
-        top: 740px;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -320,7 +313,6 @@ body {
 #About {
     padding: 10px 10%;
     position: relative;
-    top: 960px;
     background-color: #00E38C;
     text-align: center;
     font-size: 2.3em;
@@ -329,17 +321,9 @@ body {
     box-shadow: 0 3px 15px #000 inset;
 }
 
-@media only screen and (max-width: 1400px) {
-    #About {
-        font-size: 1.5em;
-        top: 740px;
-    }
-}
-
 /*SECTION 4 ********************************/
 #ServicesHead {
     position: relative;
-    top: 960px;
     color: #fff;
     text-shadow: 3px 3px 9px #000;
     text-align: center;
@@ -352,7 +336,17 @@ body {
 #Services {
     position: relative;
     height: 450px;
-    top: 960px;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    background-color: #0cf;
+    font-family: 'Play',serif;
+    padding: 10px 10%;
+}
+
+#Services2 {
+    position: relative;
+    height: 450px;
     color: #fff;
     text-align: center;
     font-size: 2em;
@@ -368,13 +362,15 @@ body {
     border-radius: 20%;
 }
 
-@media only screen and (max-width: 1400px) {
-    #ServicesHead {
-        top: 740px;
-    }
+#Services2 img {
+    box-shadow: 2px 3px 15px #000;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 20%;
+}
 
+@media only screen and (max-width: 500px) {
     #Services {
-        top: 740px;
         font-size: 1.5em;
     }
 }
