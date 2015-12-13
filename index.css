@@ -111,9 +111,6 @@ body {
     -webkit-transition: all .5s;
 }
 
-#NavWrap li .button:hover {
-    box-shadow: 0 0 15px 3px #fff;
-}
 
 #NavWrap li .button:focus {
     outline: none;
