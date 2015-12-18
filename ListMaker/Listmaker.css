@@ -16,7 +16,7 @@ body {
 
 div {
   width: 98%;
-  word-break: break-all;
+  word-break: keep-all;
 }
 
 input {
