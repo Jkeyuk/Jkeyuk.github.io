@@ -47,7 +47,7 @@ function deleteList() {
     delete sessionStorage.savedFile;
     output1.innerHTML = "";
   } else {
-    window.alert("list kept");
+    return;
   }
 
 }
