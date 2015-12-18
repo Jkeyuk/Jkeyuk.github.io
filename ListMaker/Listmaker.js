@@ -41,10 +41,15 @@ function loadSession() {
 }
 
 function deleteList() {
-  window.array = [];
-  delete sessionStorage.savedFile;
-  output1.innerHTML = "";
-  window.alert("LIST DELETED!");
+  var x = window.confirm("ARE YOU SURE YOU WANT TO DELETE?");
+  if (x) {
+    window.array = [];
+    delete sessionStorage.savedFile;
+    output1.innerHTML = "";
+  } else {
+    window.alert("list kept");
+  }
+
 }
 
 function displayList() {
