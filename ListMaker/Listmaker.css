@@ -14,7 +14,7 @@ body {
 }
 
 div {
-  width: 90%;
+  width: 100%;
 }
 
 input {
@@ -52,4 +52,7 @@ input:focus {
   body {
     font-size: 1.5em;
   }
+  div {
+  width: 90%;
+}
 }
