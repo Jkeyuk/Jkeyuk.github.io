@@ -54,5 +54,8 @@ input:focus {
   body {
     font-size: 1.5em;
   }
+  div {
+  width: 90%;
   
+}
 }
