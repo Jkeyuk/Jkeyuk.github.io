@@ -389,6 +389,7 @@ body {
 }
 
 .project {
+  box-shadow: 0px 2px 15px #000;
   background-color: #00E38C;
   width: 100%;
   float: left;
