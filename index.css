@@ -1,379 +1,384 @@
 /*RESPONSIVE GRID LAYOUT ********************************/
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 [class*="col-"] {
-    float: left;
+  float: left;
 }
 
 .row:after {
-    content: "";
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .col-1 {
-    width: 8.33%;
+  width: 8.33%;
 }
 
 .col-2 {
-    width: 16.66%;
+  width: 16.66%;
 }
 
 .col-3 {
-    width: 25%;
+  width: 25%;
 }
 
 .col-4 {
-    width: 33.33%;
+  width: 33.33%;
 }
 
 .col-5 {
-    width: 41.66%;
+  width: 41.66%;
 }
 
 .col-6 {
-    width: 50%;
+  width: 50%;
 }
 
 .col-7 {
-    width: 58.33%;
+  width: 58.33%;
 }
 
 .col-8 {
-    width: 66.66%;
+  width: 66.66%;
 }
 
 .col-9 {
-    width: 75%;
+  width: 75%;
 }
 
 .col-10 {
-    width: 83.33%;
+  width: 83.33%;
 }
 
 .col-11 {
-    width: 91.66%;
+  width: 91.66%;
 }
 
 .col-12 {
-    width: 100%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
 }
 
+
 /*END END RESPONSIVE GRID LAYOUT ********************************/
+
+
 /*NAV BAR ********************************/
+
 #NavWrap {
-    position: fixed;
-    z-index: 1;
-    transition: all .5s;
-    -webkit-transition: all .5s;
+  position: fixed;
+  z-index: 1;
+  transition: all .5s;
+  -webkit-transition: all .5s;
 }
 
 #NavWrap ul {
-    list-style-type: none;
-    margin: 5px;
-    padding: 0;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
 }
 
 #NavWrap li {
-    float: left;
-    padding: 1px;
-    overflow: hidden;
+  float: left;
+  padding: 0px;
+  overflow: hidden;
 }
 
 #NavWrap li .button {
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.5em;
-    height: 45px;
-    font-family: 'Play',serif;
-    font-weight: 200;
-    color: #e6e6e6;
-    background-color: #0079cc;
-    border-radius: 5%;
-    border: none;
-    padding: 2px 10px;
-    transition: all .5s;
-    -webkit-transition: all .5s;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5em;
+  height: 45px;
+  font-family: 'Play', serif;
+  font-weight: 200;
+  color: #e6e6e6;
+  background-color: #0079cc;
+  border-radius: 5%;
+  border: none;
+  padding: 2px 10px;
+  margin: 2px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  position: relative;
+  bottom: 70px;
 }
 
+#NavWrap li #NavButton {
+  bottom: 0px;
+}
 
 #NavWrap li .button:focus {
-    outline: none;
-}
-
-#SkillsButton {
-    position: relative;
-    bottom: 70px;
-}
-
-#codePen {
-    position: relative;
-    bottom: 70px;
+  outline: none;
 }
 
 @media only screen and (max-width: 400px) {
-    #NavWrap {
-        z-index: 0;
-    }
+  #NavWrap {
+    z-index: 0;
+  }
 }
 
+
 /*END END NAV BAR ********************************/
+
+
 /*SECTION 1 ********************************/
+
 #FixedImage {
-    position: fixed;
-    background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    z-index: -11;
+  position: fixed;
+  background-image: url(https://cloud.githubusercontent.com/assets/15953484/11613065/adb80c10-9be1-11e5-9c38-476fc8e3c8d1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: -11;
 }
 
 #FixedImage h2 {
-    position: relative;
-    color: #e6e6e6;
-    text-shadow: 0 0 12px #000;
-    font-size: 3em;
-    font-family: 'Play',serif;
-    text-align: center;
-    top: 25%;
+  position: relative;
+  color: #e6e6e6;
+  text-shadow: 0 0 12px #000;
+  font-size: 3em;
+  font-family: 'Play', serif;
+  text-align: center;
+  top: 25%;
 }
 
+
 /*SVG logo CSS*/
+
 #jkLogo {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    right: 0;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  right: 0;
 }
 
 #jkCircle {
-    -webkit-animation-name: pulse;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-name: pulse;
-    -moz-animation-duration: 6s;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-name: pulse;
-    -ms-animation-duration: 6s;
-    -ms-animation-iteration-count: infinite;
-    animation-name: pulse;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: pulse;
+  -moz-animation-duration: 6s;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-name: pulse;
+  -ms-animation-duration: 6s;
+  -ms-animation-iteration-count: infinite;
+  animation-name: pulse;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes pulse {
-    0% {
-        stroke-dasharray: 30 15;
-    }
-
-    50% {
-        stroke-dasharray: 0 25;
-    }
-
-    100% {
-        stroke-dasharray: 30 15;
-    }
+  0% {
+    stroke-dasharray: 30 15;
+  }
+  50% {
+    stroke-dasharray: 0 25;
+  }
+  100% {
+    stroke-dasharray: 30 15;
+  }
 }
 
 @-moz-keyframes pulse {
-    0% {
-        stroke-dasharray: 30 15;
-    }
-
-    50% {
-        stroke-dasharray: 0 25;
-    }
-
-    100% {
-        stroke-dasharray: 30 15;
-    }
+  0% {
+    stroke-dasharray: 30 15;
+  }
+  50% {
+    stroke-dasharray: 0 25;
+  }
+  100% {
+    stroke-dasharray: 30 15;
+  }
 }
 
 @-ms-keyframes pulse {
-    0% {
-        stroke-dasharray: 30 15;
-    }
-
-    50% {
-        stroke-dasharray: 0 25;
-    }
-
-    100% {
-        stroke-dasharray: 30 15;
-    }
+  0% {
+    stroke-dasharray: 30 15;
+  }
+  50% {
+    stroke-dasharray: 0 25;
+  }
+  100% {
+    stroke-dasharray: 30 15;
+  }
 }
 
 @keyframes pulse {
-    0% {
-        stroke-dasharray: 30 15;
-    }
-
-    50% {
-        stroke-dasharray: 0 25;
-    }
-
-    100% {
-        stroke-dasharray: 30 15;
-    }
+  0% {
+    stroke-dasharray: 30 15;
+  }
+  50% {
+    stroke-dasharray: 0 25;
+  }
+  100% {
+    stroke-dasharray: 30 15;
+  }
 }
+
 
 /*END END SVG logo CSS*/
-@media only screen and (max-width: 520px) {
-    #FixedImage {
-        background-size: auto 100%;
-    }
 
-    #FixedImage h2 {
-        font-size: 2em;
-    }
+@media only screen and (max-width: 520px) {
+  #FixedImage {
+    background-size: auto 100%;
+  }
+  #FixedImage h2 {
+    font-size: 2em;
+  }
 }
 
+
 /*SECTION 2 ********************************/
+
 #Skills {
-    background-color: #33baff;
-    position: relative;
-    font-family: 'Play',serif;
+  background-color: #33baff;
+  position: relative;
+  font-family: 'Play', serif;
 }
 
 #Skills h2 {
-    font-size: 3em;
-    text-align: center;
-    color: #fff;
-    text-shadow: 3px 3px 9px #000;
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 9px #000;
 }
 
 #Skills ul {
-    margin: 0 0 100px 5%;
-    list-style-type: none;
+  margin: 0 0 100px 5%;
+  list-style-type: none;
 }
 
 #Skills li {
-    padding: 10px 0;
-    font-size: 2.5em;
-    color: #fff;
-    text-align: left;
+  padding: 10px 0;
+  font-size: 2.5em;
+  color: #fff;
+  text-align: left;
 }
 
 @media only screen and (max-width: 500px) {
-    #Skills li {
-        font-size: 1.5em;
-    }
+  #Skills li {
+    font-size: 1.5em;
+  }
 }
 
 .bar {
-    background-color: #fff;
-    border-radius: 10px 10px;
-    max-width: 90%;
-    height: .6em;
-    box-shadow: 2px 2px 15px #000;
+  background-color: #fff;
+  border-radius: 10px 10px;
+  max-width: 90%;
+  height: .6em;
+  box-shadow: 2px 2px 15px #000;
 }
 
 .innerBar {
-    background-color: #0f0;
-    box-shadow: 2px 0 2px grey;
-    border-radius: 10px 10px;
-    height: 100%;
+  background-color: #0f0;
+  box-shadow: 2px 0 2px grey;
+  border-radius: 10px 10px;
+  height: 100%;
 }
 
 .n65 {
-    max-width: 85%;
+  max-width: 85%;
 }
 
 .n55 {
-    max-width: 75%;
+  max-width: 75%;
 }
 
 .n35 {
-    max-width: 45%;
+  max-width: 45%;
 }
 
 .n0 {
-    max-width: 0;
+  max-width: 0;
 }
+
 
 /*SECTION 3 ********************************/
+
 #About {
-    padding: 10px 10%;
-    position: relative;
-    background-color: #00E38C;
-    text-align: center;
-    font-size: 2.3em;
-    color: #fff;
-    font-family: 'Play',serif;
-    box-shadow: 0 3px 15px #000 inset;
+  padding: 10px 10%;
+  position: relative;
+  background-color: #00E38C;
+  text-align: center;
+  font-size: 2.3em;
+  color: #fff;
+  font-family: 'Play', serif;
+  box-shadow: 0 3px 15px #000 inset;
 }
 
+
 /*SECTION 4 ********************************/
+
 #ServicesHead {
-    position: relative;
-    color: #fff;
-    text-shadow: 3px 3px 9px #000;
-    text-align: center;
-    font-size: 1.5em;
-    background-color: #0cf;
-    font-family: 'Play',serif;
-    padding: 0 2%;
+  position: relative;
+  color: #fff;
+  text-shadow: 3px 3px 9px #000;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #0cf;
+  font-family: 'Play', serif;
+  padding: 0 2%;
 }
 
 #Services {
-    position: relative;
-    height: 450px;
-    color: #fff;
-    text-align: center;
-    font-size: 2em;
-    background-color: #0cf;
-    font-family: 'Play',serif;
-    padding: 10px 10%;
+  position: relative;
+  height: 450px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  background-color: #0cf;
+  font-family: 'Play', serif;
+  padding: 10px 10%;
 }
 
 #Services2 {
-    position: relative;
-    height: 450px;
-    color: #fff;
-    text-align: center;
-    font-size: 2em;
-    background-color: #0cf;
-    font-family: 'Play',serif;
-    padding: 10px 10%;
+  position: relative;
+  height: 450px;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  background-color: #0cf;
+  font-family: 'Play', serif;
+  padding: 10px 10%;
 }
 
 #Services img {
-    
-    max-width: 100%;
-    height: 160px;
-    border-radius: 20%;
+  max-width: 100%;
+  height: 160px;
+  border-radius: 20%;
 }
 
 #Services2 img {
-    box-shadow: 2px 3px 15px #000;
-    max-width: 100%;
-    height: 160px;
-    border-radius: 20%;
+  box-shadow: 2px 3px 15px #000;
+  max-width: 100%;
+  height: 160px;
+  border-radius: 20%;
 }
 
 @media only screen and (max-width: 500px) {
-    #Services {
-        font-size: 1.5em;
-    }
-    #Services2 {
-        font-size: 1.5em;
-    }
-    #About {
-        font-size: 1.5em;
-    }
+  #Services {
+    font-size: 1.5em;
+  }
+  #Services2 {
+    font-size: 1.5em;
+  }
+  #About {
+    font-size: 1.5em;
+  }
 }
