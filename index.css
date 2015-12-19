@@ -235,7 +235,7 @@ body {
 /*END END SVG logo CSS*/
 @media only screen and (max-width: 520px) {
     #FixedImage {
-        background-size: 100% 100%;
+        background-size: auto 100%;
     }
 
     #FixedImage h2 {
