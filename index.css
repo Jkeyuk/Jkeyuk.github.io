@@ -237,7 +237,7 @@ body {
 
 @media only screen and (max-width: 520px) {
   #FixedImage {
-    background-size: 100% auto;
+    background-size: cover;
   }
   #FixedImage h2 {
     font-size: 2em;
