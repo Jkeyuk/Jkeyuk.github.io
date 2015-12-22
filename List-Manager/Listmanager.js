@@ -123,6 +123,3 @@ function loadFile() {
 }
 //******************************************
 displaySaves();
-//window.alert(obj.title);
-
-//localStorage.clear();
