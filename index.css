@@ -251,6 +251,7 @@ body {
   background-color: #33baff;
   position: relative;
   font-family: 'Play', serif;
+  box-shadow: 0px -5px 15px black ;
 }
 
 #Skills h2 {
