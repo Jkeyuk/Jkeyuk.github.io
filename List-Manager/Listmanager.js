@@ -12,6 +12,7 @@ button1.addEventListener('click', addToList, false);
 button2.addEventListener('click', deleteList, false);
 button3.addEventListener('click', removeLast, false);
 newListButton.addEventListener('click', newList, false);
+input1.addEventListener('keydown', inputEnter, false);
 
 var obj = {};
 
@@ -127,6 +128,12 @@ function addSaveButtonEvent() {
 
 }
 //******************************************
-
+function inputEnter() {
+	if (event.keyCode == 13) {
+		addToList();
+	} else {
+		return false;
+	}
+}
 displaySaves();
 
