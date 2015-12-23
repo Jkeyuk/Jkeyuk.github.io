@@ -1,8 +1,8 @@
 var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
-var load = document.getElementById("load");
 var newListButton = document.getElementById("newListButton");
+
 var input1 = document.getElementById("input1");
 var title = document.getElementById("title");
 var output1 = document.getElementById("output1");
@@ -11,7 +11,6 @@ var savedList = document.getElementById("savedList");
 button1.addEventListener('click', addToList, false);
 button2.addEventListener('click', deleteList, false);
 button3.addEventListener('click', removeLast, false);
-load.addEventListener('click', loadFile, false);
 newListButton.addEventListener('click', newList, false);
 
 var obj = {};
@@ -105,21 +104,29 @@ function displaySaves() {
 	var numberOfSaves = localStorage.length;
 	window.savedList.innerHTML = "";
 	for (var i = 0; i < numberOfSaves; i++) {
-		window.savedList.innerHTML += '<li>' + localStorage.key(i) + '</li>';
+		window.savedList.innerHTML += '<button class="savedListButtons">' + localStorage.key(i) + '</button>';
 	}
+
+	addSaveButtonEvent();
 }
 
 function loadFile() {
-	var x = window.prompt('Enter Name Of File To Load (MUST MATCH FILE NAME)');
-	if (localStorage.getItem(x) == null) {
-		window.alert('NO SUCH FILE FOUND(MAKE SURE YOU TYPE FILENAME EXACTLY)')
-	} else {
-		var loadDataFromJson = JSON.parse(localStorage.getItem(x));
-		var tempObj = loadDataFromJson;
-
-		obj = new list(tempObj.title, tempObj.listContent);
-		obj.displayList();
+	var x = this.innerHTML;
+	var loadDataFromJson = JSON.parse(localStorage.getItem(x));
+	var tempObj = loadDataFromJson;
+	obj = new list(tempObj.title, tempObj.listContent);
+	obj.displayList();
+}
+//ADD EVENTS TO SAVED BUTTONS
+function addSaveButtonEvent() {
+	savedListButtons = document.getElementsByClassName("savedListButtons");
+	var numberOfButtons = savedListButtons.length;
+	for (var i = 0; i < numberOfButtons; i++) {
+		savedListButtons[i].addEventListener('click', loadFile, false);
 	}
+
 }
 //******************************************
+
 displaySaves();
+
