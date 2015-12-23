@@ -2,7 +2,7 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var newListButton = document.getElementById("newListButton");
-
+var deleteAllSaves = document.getElementById("deleteAllSaves");
 var input1 = document.getElementById("input1");
 var title = document.getElementById("title");
 var output1 = document.getElementById("output1");
@@ -13,7 +13,7 @@ button2.addEventListener('click', deleteList, false);
 button3.addEventListener('click', removeLast, false);
 newListButton.addEventListener('click', newList, false);
 input1.addEventListener('keydown', inputEnter, false);
-
+deleteAllSaves.addEventListener('click', deleteSaves, false);
 var obj = {};
 
 //**************LIST CLASS CONSTRUCTOR****************************
@@ -78,7 +78,7 @@ function removeLast() {
 	obj.displayList();
 	saveFile();
 }
-//********DELETE LIST**********************************
+//********DELETE stuff**********************************
 function deleteList() {
 	var x = window.confirm('ARE YOU SURE?');
 	if (x) {
@@ -88,6 +88,17 @@ function deleteList() {
 		window.title.innerHTML = "";
 	} else {
 		return;
+	}
+	displaySaves();
+}
+
+function deleteSaves() {
+	var x = window.confirm('ARE YOU SURE??');
+	if (x) {
+		localStorage.clear();
+	} else {
+		return false;
+
 	}
 	displaySaves();
 }
@@ -136,4 +147,4 @@ function inputEnter() {
 	}
 }
 displaySaves();
-
+//window.alert(2);
