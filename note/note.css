@@ -3,8 +3,9 @@
 }
 
 body {
-  background-color: grey;
+  background-color: #ffff66;
   margin: 0;
+  padding: 0;
 }
 
 #menu {
@@ -21,9 +22,12 @@ body {
 .menuItem {
   cursor: pointer;
   display: box;
+  margin: 1px 0px;
   width: 100%;
   font-size: 3em;
   font-family: 'Play';
+  background-color: #00ff99;
+  border: 4px solid black;
 }
 
 #noteEditor {
@@ -37,6 +41,7 @@ body {
   font-size: 2em;
   background-color: #ffff66;
   border: none;
+  border-bottom: 1px solid black;
 }
 
 #noteBox {
@@ -44,7 +49,7 @@ body {
   resize: none;
   outline: none;
   width: 100%;
-  height: 18em;
+  height: 15em;
   font-size: 1.5em;
   background-color: #ffff66;
   border: none;
@@ -54,7 +59,9 @@ body {
 #notesMenuButton,
 #deleteNote {
   cursor: pointer;
-  font-size: 2em;
-  width: 98%;
-  box-shadow: 0px 10px 30px;
+  margin: 1px 0;
+  font-size: 2.5em;
+  width: 100%;
+  background-color: #00ff99;
+  border: 4px solid black;
 }
