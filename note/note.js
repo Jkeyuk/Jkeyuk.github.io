@@ -72,7 +72,7 @@ noteBox.addEventListener('input', autoSave, false);
 function stopOverWrite() {
     var x = titleBox.value;
     if (localStorage.getItem(x) != null) {
-        titleBox.value += ' ';
+        titleBox.value += '*';
         autoSave();
     } else {
         autoSave();
