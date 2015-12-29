@@ -48,7 +48,7 @@ body {
 }
 
 #noteBox {
-  margin: 1px 0;
+  margin: 2px 0;
   font-family: 'Play';
   resize: none;
   outline: none;
@@ -57,6 +57,7 @@ body {
   font-size: 1.5em;
   background-color: #ffff66;
   border: none;
+  border-top:1px solid black
 }
 
 #notesMenuButton {
