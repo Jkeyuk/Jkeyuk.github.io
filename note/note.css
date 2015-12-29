@@ -34,7 +34,7 @@ body {
 
 #topBar {
   overflow: hidden;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 #titleBox {
@@ -48,7 +48,7 @@ body {
 }
 
 #noteBox {
-  margin:1px 0;
+  margin: 1px 0;
   font-family: 'Play';
   resize: none;
   outline: none;
