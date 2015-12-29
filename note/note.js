@@ -3,10 +3,12 @@ var titleBox = document.getElementById('titleBox');
 var noteBox = document.getElementById('noteBox');
 var notesMenuButton = document.getElementById('notesMenuButton');
 var deleteNote = document.getElementById('deleteNote');
+var savedNotes = [];
 //NOTE OBJECT constructor**********************************
-var note = function(name, content) {
+var note = function(name, content, index) {
         this.name = name;
         this.content = content;
+        this.index = index;
         //display note data
         this.displayData = function() {
                 titleBox.value = '';
@@ -16,17 +18,18 @@ var note = function(name, content) {
             }
             //store note data 
         this.storeData = function() {
-            localStorage.removeItem(this.name);
             this.name = titleBox.value;
             this.content = noteBox.value;
-            var objectAsJson = JSON.stringify(this);
-            localStorage.setItem(this.name, objectAsJson);
+            savedNotes[this.index] = this;
+            var objectAsJson = JSON.stringify(savedNotes);
+            localStorage.setItem('notes', objectAsJson);
         }
     }
     //********INITIALIZE*******************
 
 function newNote() {
-        noteObject = new note('', '');
+        var x = savedNotes.length;
+        noteObject = new note('', '', x);
         noteObject.displayData();
         menu.style.width = '0%';
     }
@@ -34,11 +37,15 @@ function newNote() {
 notesMenuButton.addEventListener('click', displaySavesToMenu, false);
 
 function displaySavesToMenu() {
-        var x = localStorage.length;
+        if (localStorage.getItem('notes')) {
+            var noteData = JSON.parse(localStorage.getItem('notes'));
+            savedNotes = noteData;
+        }
+        var x = savedNotes.length; //counter
         var y = '<button class="menuItem">+New Note</button>';
         menu.innerHTML = '';
         for (var i = 0; i < x; i++) {
-            menu.innerHTML += '<button class="menuItem">' + localStorage.key(i) +
+            menu.innerHTML += '<button class="menuItem">' + savedNotes[i].name +
                 '</button>';
         }
         menu.innerHTML += y;
@@ -46,7 +53,7 @@ function displaySavesToMenu() {
         function events() {
             menuItem = document.getElementsByClassName("menuItem");
             var newbuttonspot = (menuItem.length - 1);
-            var x = localStorage.length;
+            var x = savedNotes.length;
             menuItem[newbuttonspot].addEventListener('click', newNote,
                 false);
             for (var i = 0; i < x; i++) {
@@ -60,26 +67,30 @@ function displaySavesToMenu() {
 
 function loadObject() {
         var x = this.innerHTML;
-        var tempObj = JSON.parse(localStorage.getItem(x));
-        noteObject = new note(tempObj.name, tempObj.content);
+        var counter = savedNotes.length;
+        var savedLength = savedNotes.length;
+
+        function findIndex(name) {
+            for (var i = 0; i < counter; i++) {
+                if (savedNotes[i].name === x) {
+                    return i;
+                }
+            }
+        }
+        var tempObj = savedNotes[findIndex(x)];
+        noteObject = new note(tempObj.name, tempObj.content, findIndex(x));
         noteObject.displayData();
         menu.style.width = '0%';
+        noteObject.storeData();
     }
-    //AUTO SAVE feature*************************not perfect
-titleBox.addEventListener('input', stopOverWrite, false);
+    //AUTO SAVE feature*************************
+titleBox.addEventListener('input', autoSave, false);
 noteBox.addEventListener('input', autoSave, false);
 
-function stopOverWrite() {
-    var x = titleBox.value;
-    if (localStorage.getItem(x) != null || x==='') {
-        titleBox.value += '*';
-        autoSave();
-    } else {
-        autoSave();
-    }
-}
-
 function autoSave() {
+        if (titleBox.value.length === 0 || titleBox.value === " ") {
+            titleBox.value += '*';
+        }
         noteObject.storeData();
     }
     //DELETE NOTE******************************************
@@ -88,20 +99,13 @@ deleteNote.addEventListener('click', removeNote, false);
 function removeNote() {
         var x = window.confirm('ARE YOU SURE YOU WANT TO DELETE');
         if (x) {
-            localStorage.removeItem(noteObject.name);
+            savedNotes.splice(noteObject.index, 1);
+            var objectAsJson = JSON.stringify(savedNotes);
+            localStorage.setItem('notes', objectAsJson);
             displaySavesToMenu();
         } else {
             return;
         }
     }
-    /////dev tools
 
-function test() {
-    window.alert(localStorage.length);
-    window.alert(localStorage.key(0));
-    window.alert(localStorage.getItem(localStorage.key(0)));
-}
 displaySavesToMenu();
-//loadObject();
-//test();
-//localStorage.clear();
