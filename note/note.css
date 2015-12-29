@@ -1,15 +1,14 @@
 * {
   box-sizing: border-box;
-}
-
-body {
-  background-color: #ffff66;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #ffff66;
+}
+
 #menu {
-  margin: 0px 0px;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -28,22 +27,24 @@ body {
   font-family: 'Play';
   background-color: #00ff99;
   border: none;
-  box-shadow:0px 5px 20px black;
+  box-shadow: 0px 5px 20px black;
 }
 
-#noteEditor {
-  text-align: center;
+#noteEditor {}
+
+#topBar {
+  overflow: hidden;
+  border-bottom: 1px solid black;
 }
 
 #titleBox {
-  float: left;
   font-family: 'Play';
+  float: left;
   outline: none;
   width: 85%;
   font-size: 2em;
   background-color: #ffff66;
   border: none;
-  border-bottom: 1px solid black;
 }
 
 #noteBox {
@@ -51,29 +52,29 @@ body {
   resize: none;
   outline: none;
   width: 100%;
-  height: 18em;
+  height: 400px;
   font-size: 1.5em;
   background-color: #ffff66;
   border: none;
-  margin: 1px 0;
 }
 
 #notesMenuButton {
+  text-align: center;
+  float: right;
   cursor: pointer;
-  margin: 1px 0;
-  float: left;
-  font-size: 1.91em;
+  font-size: 2em;
   width: 15%;
   background-color: #ffff66;
   border: none;
-  border-bottom: 1px solid black;
   border-left: 1px solid black;
 }
 
 #deleteNote {
-  position:fixed;
+  text-align: center;
+  position: fixed;
   cursor: pointer;
-  left:45%;
+  top: 70%;
+  left: 45%;
   font-size: 2.5em;
   width: 50px;
   background-color: red;
