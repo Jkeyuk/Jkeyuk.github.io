@@ -48,6 +48,7 @@ body {
 }
 
 #noteBox {
+  margin:1px 0;
   font-family: 'Play';
   resize: none;
   outline: none;
