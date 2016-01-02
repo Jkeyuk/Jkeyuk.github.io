@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: play;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+}
+
+/*TOP BAR****************************************/
+#inputWrap {
+    overflow: hidden;
+}
+
+#itemInput {
+    outline: none;
+    float: left;
+    width: 60%;
+    font-size: 2em;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+#priceInput {
+    outline: none;
+    float: left;
+    width: 25%;
+    font-size: 2em;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+#itemInput:focus,#priceInput:focus {
+    background-color: #99ffdc;
+}
+
+#addButton {
+    width: 15%;
+    float: right;
+    font-size: 2em;
+    border: 1px solid #000;
+    background-color: silver;
+}
+
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/*OUTPUT****************************************/
+.outputWrap {
+    overflow: hidden;
+    position: relative;
+    margin: 5px 0;
+}
+
+.checkBox {
+    display: inline;
+    margin: 5px;
+    vertical-align: middle;
+    height: 3em;
+    width: 3em;
+    border-radius: 0;
+}
+
+.listItem {
+    display: inline;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.itemPrice {
+    float: right;
+    line-height: 50px;
+    margin: 0 5px 0 0;
+    font-size: 1.5em;
+}
+
+.removeButton {
+    width: 15%;
+    float: right;
+    font-size: 2.6em;
+    border: 1px solid #000;
+    background-color: red;
+}
+
+/*TOTAL COST****************************************/
+#total {
+    font-size: 1.5em;
+    margin: 5px;
+}
