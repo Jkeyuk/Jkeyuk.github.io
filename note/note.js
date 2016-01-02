@@ -6,7 +6,7 @@ var deleteNote = document.getElementById('deleteNote');
 var savedNotes = [];
 //NOTE OBJECT constructor**********************************
 var note = function(name, content, index) {
-        this.name = name;
+        this.name = name || 'Note Name here';
         this.content = content;
         this.index = index;
         //display note data
@@ -20,7 +20,8 @@ var note = function(name, content, index) {
         this.storeData = function() {
             this.name = titleBox.value;
             this.content = noteBox.value;
-            savedNotes[this.index] = this;
+            var temp = new note(this.name, this.content, this.index);
+            savedNotes[this.index] = temp;
             var objectAsJson = JSON.stringify(savedNotes);
             localStorage.setItem('notes', objectAsJson);
         }
@@ -88,9 +89,6 @@ titleBox.addEventListener('input', autoSave, false);
 noteBox.addEventListener('input', autoSave, false);
 
 function autoSave() {
-        if (titleBox.value.length === 0 || titleBox.value === " ") {
-            titleBox.value += '*';
-        }
         noteObject.storeData();
     }
     //DELETE NOTE******************************************
@@ -107,5 +105,14 @@ function removeNote() {
             return;
         }
     }
+    /////dev tools
 
+function test() {
+    window.alert(titleBox.value.length);
+    // window.alert(savedNotes[0]);
+    // window.alert(savedNotes);
+}
 displaySavesToMenu();
+//loadObject();
+//test();
+//localStorage.clear();
