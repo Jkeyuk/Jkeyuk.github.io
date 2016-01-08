@@ -8,7 +8,6 @@ var eventInput = document.getElementById('eventInput');
 var addEventBut = document.getElementById('addEventBut');
 var dateInput = document.getElementById('dateInput');
 var eventStorage = [];
-        initialize();
 //***********objects and constructors********************************
 //event object constructor
 function Event(dateObject, description) {
@@ -150,7 +149,7 @@ function initialize() {
     dayInterface.dayFill(today);
     dayInterface.setButtonEvents();
 }
-
-
-
+window.onload = function() {
+        initialize();
+    }
     //***************************************************
