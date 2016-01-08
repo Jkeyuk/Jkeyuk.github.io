@@ -135,6 +135,8 @@ function addEventButtonFunc() {
   var monthIndex = dateObject.getMonth();
   var year = dateObject.getFullYear();
   eventStorage.push(x);
+  var jasonfired = JSON.stringify(eventStorage);
+  localStorage.setItem("jk1", jasonfired);
   dayInterface.filterEvents(dayIndex, monthIndex, year);
   dayInterface.dayFill(dateObject);
   dateInput.value = '';
@@ -145,14 +147,33 @@ function addEventButtonFunc() {
 
 function initialize() {
   var today = new Date();
+  var dayIndex = today.getDate();
+  var monthIndex = today.getMonth();
+  var year = today.getFullYear();
   yearInterface.setCurretYear(today);
   yearInterface.setButtonEvents();
   monthInterface.monthFill(today);
   monthInterface.setButtonEvents();
+  dayInterface.filterEvents(dayIndex, monthIndex, year);
   dayInterface.dayFill(today);
   dayInterface.setButtonEvents();
 }
+
+function loadEvents() {
+  var parsedList = JSON.parse(localStorage.getItem('jk1')) || [];  
+  for (var i = 0; i < parsedList.length; i++) {
+    var dateObject = new Date(Date.parse(parsedList[i].dateObject));
+    var description = parsedList[i].description;
+    var newEvent = new Event(dateObject, description);
+    eventStorage.push(newEvent);
+  }
+  
+
+}
 window.onload = function() {
-    initialize();
+    loadEvents();
+    initialize();   
   }
   //***************************************************
+  //localStorage.clear();
+  //window.alert(parsedList[0].description);
