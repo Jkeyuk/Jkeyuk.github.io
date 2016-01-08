@@ -152,10 +152,5 @@ function initialize() {
   //***************************************************
 
 initialize();
-  var today = new Date();
-    yearInterface.setCurretYear(today);
-    yearInterface.setButtonEvents();
-    monthInterface.monthFill(today);
-    monthInterface.setButtonEvents();
-    dayInterface.dayFill(today);
-    dayInterface.setButtonEvents();
+
+ 
