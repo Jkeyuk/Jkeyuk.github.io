@@ -151,4 +151,4 @@ function initialize() {
 }
 initialize();
 //***************************************************
-//window.alert(eventStorage[0].dateObject.getDate());
+window.alert(eventStorage[0].dateObject.getDate());
