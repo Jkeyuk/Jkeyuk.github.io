@@ -6,8 +6,21 @@ body {
   margin: 0;
   padding: 0;
   background-color: grey;
+  text-align: center;
 }
-td{
-  text-align:center;
-  cursor:pointer;
+
+#yearWrap {
+  display: inline-block;
+}
+
+#monthWrap {
+  display: inline-block;
+}
+
+#dayWrap {
+  display: inline-block;
+}
+
+td {
+  cursor: pointer;
 }
