@@ -142,7 +142,7 @@ function addEventButtonFunc() {
 
 function initialize() {
     var today = new Date();
-    yearInterface.setCurretYear(today);
+    //yearInterface.setCurretYear(today);
     yearInterface.setButtonEvents();
     monthInterface.monthFill(today);
     monthInterface.setButtonEvents();
