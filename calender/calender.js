@@ -95,7 +95,7 @@ var yearInterface = {
         //set year interface header 
         setCurretYear: function(dateObject) {
             var year = dateObject.getFullYear();
-            yearHeader.innerHTML = year;
+            yearHeader.innerHTML = year || 2000;
         },
         //set year interface events to buttons
         setButtonEvents: function() {
