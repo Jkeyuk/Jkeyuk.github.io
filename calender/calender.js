@@ -8,6 +8,7 @@ var eventInput = document.getElementById('eventInput');
 var addEventBut = document.getElementById('addEventBut');
 var dateInput = document.getElementById('dateInput');
 var eventStorage = [];
+        initialize();
 //***********objects and constructors********************************
 //event object constructor
 function Event(dateObject, description) {
@@ -94,8 +95,7 @@ var yearInterface = {
         ],
         //set year interface header 
         setCurretYear: function(dateObject) {
-            var year = dateObject.getFullYear();
-            yearHeader.innerHTML = year || 2000;
+            yearHeader.innerHTML = dateObject.getFullYear();
         },
         //set year interface events to buttons
         setButtonEvents: function() {
@@ -150,8 +150,7 @@ function initialize() {
     dayInterface.dayFill(today);
     dayInterface.setButtonEvents();
 }
-  //***************************************************
 
-initialize();
 
- 
+
+    //***************************************************
