@@ -42,8 +42,7 @@ var dayInterface = {
         var TestDay = eventStorage[i].dateObject.getDate();
         var TestMonth = eventStorage[i].dateObject.getMonth();
         var TestYear = eventStorage[i].dateObject.getFullYear();
-        if (TestDay == day && TestMonth == monthIndex && TestYear ==
-          year) {
+        if (TestDay == day && TestMonth == monthIndex && TestYear == year) {
           passed.push(eventStorage[i]);
         }
       }
