@@ -149,6 +149,6 @@ function initialize() {
     dayInterface.dayFill(today);
     dayInterface.setButtonEvents();
 }
-initialize();
+window.onload = function(){initialize();}
 //***************************************************
 window.alert(eventStorage[0].dateObject.getDate());
