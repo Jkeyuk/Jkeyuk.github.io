@@ -11,143 +11,138 @@
     <link href="calender.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!--*******************top bar**********************************************-->
-    <div id='topBar'>
-        <div id='eventInputWrap'>
-            <input id='eventInput' placeholder='Enter Event' type='text'>
-            <input id='dateInput' type='date'> <button id=
-            'addEventBut'>+</button>
-        </div>
-        <div id='topWrap'>
-            <button id='dayHeader'>Day</button> <button id=
-            'eventInputSliderButton'>&#9776;</button>
-        </div>
+   <!--*******************top bar**********************************************-->
+<div id='topBar'>
+  <div id='eventInputWrap'>
+    <input type='text' id='eventInput' placeholder='Enter Event'></input>
+    <select id='eventPickYear'>
+      <option value='2016'>2016</option>
+    </select>
+    <select id='eventPickMonth'>
+      <option value='January'>January</option>
+      <option value='February'>February</option>
+      <option value='March'>March</option>
+      <option value='April'>April</option>
+      <option value='May'>May</option>
+      <option value='June'>June</option>
+      <option value='July'>July</option>
+      <option value='August'>August</option>
+      <option value='September'>September</option>
+      <option value='October'>October</option>
+      <option value='November'>November</option>
+      <option value='December'>December</option>
+    </select>
+    <select id='eventPickDay'>
+      <option value='1'>1</option>
+    </select>
+    <button id='addEventBut'>+</button>
+  </div>
+  <div id='topWrap'>
+    <div id='topBarHeader'>
+      <p id='monthHeader'>MONTH</p>
+      <p id='yearHeader'>YEAR</p>
+      <p>&#9660;</p>
     </div>
-    <!--***************************event wrap**************************************-->
-    <div id='eventWrap'>
-        <p>EVENTS</p>
-        <ul id='eventList'>
-            <li class='eventListItem'>No Events Yet</li>
-        </ul>
-    </div>
-    <!--***************************date Picker**************************************-->
-    <div id='datePicker'>
-        <div id='dateHeaderWrap'>
-            <p id='monthHeader'>MONTH</p>
-            <p id='yearHeader'>YEAR</p>
-            <p>&#9660;</p>
-        </div>
-        <div id='datePickerDropDown'>
-            <select id='pickYear'>
-                <option value='2016'>
-                    2016
-                </option>
-            </select> <select id='pickMonth'>
-                <option value='January'>
-                    January
-                </option>
-                <option value='February'>
-                    February
-                </option>
-                <option value='March'>
-                    March
-                </option>
-                <option value='April'>
-                    April
-                </option>
-                <option value='May'>
-                    May
-                </option>
-                <option value='June'>
-                    June
-                </option>
-                <option value='July'>
-                    July
-                </option>
-                <option value='August'>
-                    August
-                </option>
-                <option value='September'>
-                    September
-                </option>
-                <option value='October'>
-                    October
-                </option>
-                <option value='November'>
-                    November
-                </option>
-                <option value='December'>
-                    December
-                </option>
-            </select> <button id='dateSelectButton'>GO</button>
-        </div>
-        <!--***************************CALENDER**************************************-->
-        <table>
-            <tr>
-                <td>S</td>
-                <td>M</td>
-                <td>T</td>
-                <td>W</td>
-                <td>T</td>
-                <td>F</td>
-                <td>S</td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-            <tr>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-                <td class='day'></td>
-            </tr>
-        </table>
-    </div>
+    <button id='eventInputSliderButton'>&#9776;</button>
+  </div>
+</div>
+
+<!--***************************date Picker**************************************-->
+
+<div id='datePickerDropDown'>
+  <select id='pickYear'>
+    <option value='2016'>2016</option>
+  </select>
+  <select id='pickMonth'>
+    <option value='January'>January</option>
+    <option value='February'>February</option>
+    <option value='March'>March</option>
+    <option value='April'>April</option>
+    <option value='May'>May</option>
+    <option value='June'>June</option>
+    <option value='July'>July</option>
+    <option value='August'>August</option>
+    <option value='September'>September</option>
+    <option value='October'>October</option>
+    <option value='November'>November</option>
+    <option value='December'>December</option>
+  </select>
+  <button id='dateSelectButton'>GO</button>
+</div>
+<!--***************************CALENDER**************************************-->
+<table>
+  <tr>
+    <td>S</td>
+    <td>M</td>
+    <td>T</td>
+    <td>W</td>
+    <td>T</td>
+    <td>F</td>
+    <td>S</td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+  <tr>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+    <td class='day'></td>
+  </tr>
+</table>
+</div>
+<!--***************************event wrap**************************************-->
+<div id='eventWrap'>
+  <h3 id='dayHeader'>Day</h3>
+  <ul id='eventList'>
+    <li class='eventListItem'>No Events Yet</li>
+  </ul>
+</div>
     <script src="calender.js">
     </script>
 </body>
