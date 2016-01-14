@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #00ff00;
+  background-color: #99ff66;
 }
 
 
@@ -14,14 +14,20 @@ body {
 
 #topBar {
   overflow: hidden;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
-#dayHeader {
+#topBarHeader {
+  cursor: pointer;
   width: 80%;
+  display: inline-block;
   height: 40px;
-  font-size: 1.1em;
-  border: none;
+}
+
+#topBarHeader p {
+  display: inline-block;
+  font-size: 1.6em;
 }
 
 #eventInputSliderButton {
@@ -31,6 +37,7 @@ body {
   font-size: 1.5em;
   border: none;
   border-left: 1px solid black;
+  background-color: #cccccc;
 }
 
 
@@ -51,21 +58,41 @@ body {
   height: 40px;
 }
 
-#dateInput {
+#eventPickYear {
   float: left;
-  font-size: 1.5em;
-  width: 80%;
+  font-size: 1.2em;
+  width: 25%;
   height: 40px;
   border: none;
+  border-radius: 0;
+}
+
+#eventPickMonth {
+  float: left;
+  font-size: 1.2em;
+  width: 35%;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+}
+
+#eventPickDay {
+  float: left;
+  font-size: 1.2em;
+  width: 20%;
+  height: 40px;
+  border: none;
+  border-radius: 0;
 }
 
 #addEventBut {
-  float: left;
+  float: right;
   font-size: 2em;
   width: 20%;
   height: 40px;
   border: none;
   border-left: 1px solid black;
+  background-color: #cccccc;
 }
 
 
@@ -73,9 +100,9 @@ body {
 
 #eventWrap {
   text-align: center;
-  background-color: #00ff00;
   padding: 10px;
   font-size: 1.1em;
+  border-bottom: 1px solid black;
 }
 
 #eventList {
@@ -92,29 +119,6 @@ body {
 
 /*****datepicker******/
 
-#datePicker {
-  text-align: center;
-  display: none;
-  max-width: 100%;
-  overflow: hidden;
-  background-color: #00ff00;
-}
-
-#dateHeaderWrap {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px;
-}
-
-#dateHeaderWrap p {
-  display: inline-block;
-  font-size: 1.5em;
-}
-
-#dateHeaderWrap:hover {
-  color: white;
-}
-
 #datePickerDropDown {
   overflow: hidden;
   display: none;
@@ -124,11 +128,17 @@ body {
   float: left;
   font-size: 1.2em;
   width: 40%;
+  height: 40px;
+  border-radius: 0;
 }
 
 #dateSelectButton {
   width: 20%;
-  font-size: 1.2em;
+  height: 40px;
+  font-size: 1.3em;
+  border: none;
+  border: 1px solid black;
+  background-color: #cccccc;
 }
 
 
@@ -144,6 +154,7 @@ table {
 }
 
 td {
+  text-align: center;
   background-color: white;
   font-size: 1.4em;
   border: 1px solid black;
