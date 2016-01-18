@@ -1,2 +1,2 @@
 # Jkeyuk.github.io
-Website Portfolio and apps
+Website Portfolio and Web Applications
