@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffff66;
+}
+
+
+/************Contact List******************/
+
+#contactListWrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+
+#topBar {
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  background-color: #b3b3b3;
+}
+
+#contactInputBut {
+  cursor: pointer;
+  float: right;
+  font-size: 2em;
+  width: 50px;
+  background-color: #b3b3b3;
+  border: none;
+  border-left: 1px solid black;
+}
+
+#topBar p {
+  display: inline;
+  font-size: 2em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  cursor: pointer;
+  height: 50px;
+  font-size: 2em;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+
+/************Input Menu******************/
+
+#contactInputWrap {
+  position: fixed;
+  width: 0%;
+  height: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#contactInputWrap p {
+  font-size: 1.5em;
+}
+
+#contactInputWrap input {
+  width: 90%;
+  font-size: 1em;
+}
+
+#contactInputWrap textarea {
+  width: 90%;
+  font-size: 1.2em;
+  resize: none;
+  height: 7em;
+}
+
+#contactInputWrap button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  background-color: #b3b3b3;
+}
+
+
+/************Profile wrap*****************/
+
+#contactProfileWrap {
+  position: fixed;
+  width: 0%;
+  height: 100%;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  line-height: 2em;
+  text-align: center;
+}
+
+#contactProfileWrap p {
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+#contactProfileWrap button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  background-color: #b3b3b3;
+}
+
+
+/************general selectors******************/
