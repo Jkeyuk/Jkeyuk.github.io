@@ -1,0 +1,58 @@
+<!--****************contact list******************************************** -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Manager App</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet'
+    type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=
+    "stylesheet">
+    <link href="contact.css" rel="stylesheet">
+</head>
+<body>
+    <div id='contactListWrap'>
+        <div id='topBar'>
+            <p>CONTACTS</p><button id='contactInputBut'>+</button>
+        </div>
+        <table id='contactListTable'></table>
+    </div>
+    <!--****************contact input******************************************** -->
+    <div id='contactInputWrap'>
+        <p>First Name</p><input id='inputFirstName' type='text'>
+        <p>Last Name</p><input id='inputLastName' type='text'>
+        <p>Phone Number</p><input id='inputPhone' type='text'>
+        <p>Address</p><input id='inputAddress' type='text'>
+        <p>Email</p><input id='inputEmail' type='text'>
+        <p>Birthday</p><input id='inputbDay' type='text'>
+        <p>Notes</p>
+        <textarea id='inputNotes'>
+</textarea><br>
+        <button id='addContactButton'>Add Contact</button> <button class=
+        'menuButton'>&#8672;</button>
+    </div>
+    <!--****************contact profile******************************************** -->
+    <div id='contactProfileWrap'>
+        <h1>Contact Profile</h1>
+        <p class='profileLabel'>First Name:</p>
+        <p id='firstNameDisplay'></p><br>
+        <p class='profileLabel'>Last Name:</p>
+        <p id='lastNameDisplay'></p><br>
+        <p class='profileLabel'>Phone Number:</p>
+        <p id='phoneDisplay'></p><br>
+        <p class='profileLabel'>Address:</p>
+        <p id='addressDisplay'></p><br>
+        <p class='profileLabel'>Email:</p>
+        <p id='emailDisplay'></p><br>
+        <p class='profileLabel'>Birthday:</p>
+        <p id='bDayDisplay'></p><br>
+        <p class='profileLabel'>Notes:</p>
+        <p id='notesDisplay'></p><br>
+        <button class='menuButton'>&#8672;</button> <button id=
+        'removeContactBut'>Remove Contact</button>
+    </div>
+    <script src="contact.js">
+    </script>
+</body>
+</html>
