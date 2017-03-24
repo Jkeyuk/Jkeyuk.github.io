@@ -235,9 +235,7 @@ body {
     stroke-dasharray: 30 15;
   }
 }
-
-
-/*END END SVG logo CSS*/
+/*END SVG logo CSS*/
 
 @media only screen and (max-width: 520px) {
   #FixedImage {
@@ -298,16 +296,24 @@ body {
   height: 100%;
 }
 
-.n65 {
+.n85 {
   max-width: 85%;
 }
 
-.n55 {
+.n75 {
   max-width: 75%;
 }
 
+.n65 {
+  max-width: 65%;
+}
+
+.n55 {
+  max-width: 55%;
+}
+
 .n35 {
-  max-width: 45%;
+  max-width: 35%;
 }
 
 .n0 {
