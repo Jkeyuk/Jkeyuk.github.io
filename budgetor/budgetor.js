@@ -105,6 +105,3 @@ window.onload = function() {
   list.displayList();
   list.addEventsToButtons();
 }
-
-//dev tools 
-//window.alert(list.listItems);
