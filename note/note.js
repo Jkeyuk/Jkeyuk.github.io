@@ -105,14 +105,6 @@ function removeNote() {
             return;
         }
     }
-    /////dev tools
 
-function test() {
-    window.alert(titleBox.value.length);
-    // window.alert(savedNotes[0]);
-    // window.alert(savedNotes);
-}
+
 displaySavesToMenu();
-//loadObject();
-//test();
-//localStorage.clear();
