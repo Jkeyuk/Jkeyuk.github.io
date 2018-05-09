@@ -1,0 +1,18 @@
+body {
+    background-color: #75B5AA;
+}
+
+h1, p{
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    border: 2px solid black;
+}
+
+td{
+    text-align: center;
+}
