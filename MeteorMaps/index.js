@@ -61,7 +61,7 @@ $(document).ready(function () {
 	 * hover event listeners to mark row for user
 	 */
 	$('body').on("mouseenter", '#table_id tbody tr', function () {
-		$(this).css("background-color", "#AA759F");
+		$(this).css("background-color", "#e2e3ebce");
 	});
 	$('body').on("mouseleave", '#table_id tbody tr', function () {
 		$(this).css("background-color", "#ffffff");
