@@ -28,9 +28,7 @@ function setMarker(lat, long, popUpString, map) {
 	L.marker([lat, long]).addTo(map).bindPopup(popUpString).addTo(markerGroup);
 }
 
-/**
- * Load Table and set Events when document finished loading
- */
+//Load Table and set Events when document finished loading
 $(document).ready(function () {
 	/**
 	 * Initializes table with data from meteorData.js
