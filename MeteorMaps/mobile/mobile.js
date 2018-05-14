@@ -11,8 +11,8 @@ var howDiv = document.getElementById('howDiv');
 function showData() {
     dataDiv.style.width = '100%';
     dataDiv.style.overflow = 'auto';
-    mapDiv.style.width = '0%';
     howDiv.style.width = '0%';
+    mapDiv.style.visibility = 'hidden';
 }
 
 /**
@@ -28,7 +28,7 @@ function hideData() {
  */
 function showMap() {
     hideData();
-    mapDiv.style.width = '100%';
+    mapDiv.style.visibility = 'visible';
     howDiv.style.width = '0%';
 }
 
@@ -37,7 +37,7 @@ function showMap() {
  */
 function showHowTo() {
     hideData();
-    mapDiv.style.width = '0%';
+    mapDiv.style.visibility = 'hidden';
     howDiv.style.width = '100%';
 }
 

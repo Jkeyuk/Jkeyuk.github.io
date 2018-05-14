@@ -3,7 +3,7 @@
  */
 
 //Variable to hold map object
-var myMap = L.map('map', { maxBoundsViscosity: 1 }).setView([51.505, -0.09], 7);
+var myMap = L.map('map', { maxBoundsViscosity: 1 }).setView([51.505, -0.09], 12);
 
 //Variable to hold marker group, used for removing markers.
 var markerGroup = L.layerGroup().addTo(myMap);
