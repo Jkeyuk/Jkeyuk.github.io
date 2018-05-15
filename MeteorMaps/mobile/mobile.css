@@ -25,6 +25,7 @@ button{
     padding: 5px 6px;
     border: none;
     border-radius: 8px;
+    font-size: 16px;
 }
 
 /* Instructions div styles */
@@ -49,7 +50,7 @@ button{
 /* Table div styles */
 
 #dataDiv{
-    padding-top: 35px;
+    padding-top: 40px;
     width: 100%;
     overflow: hidden;
     position: absolute;
