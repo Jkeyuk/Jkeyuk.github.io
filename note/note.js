@@ -20,7 +20,7 @@ class note {
 }
 
 /**
- * Display contents of a give note on the note pane
+ * Display contents of a given note on the note pane
  * @param {object} note - note object to display
  */
 function displayNote(note) {
@@ -56,7 +56,7 @@ function buildMenu() {
     menu.innerHTML = '';
     for (var i = 0; i < savedNotes.length; i++) {
         menu.innerHTML += '<button class="menuItem" onclick="loadObject(this)">' +
-            savedNotes[i].name +
+            (i + 1) + ': ' + savedNotes[i].name +
             '</button>';
     }
     menu.innerHTML += '<button class="menuItem" onclick="newNote()">+New Note</button>';
@@ -76,11 +76,7 @@ function displaySavesToMenu() {
  * @param {HTMLElement} obj - the html element that calls this function
  */
 function loadObject(obj) {
-    for (var i = 0; i < savedNotes.length; i++) {
-        if (savedNotes[i].name === obj.innerHTML) {
-            currentNote = savedNotes[i];
-        }
-    }
+    currentNote = savedNotes[Number(obj.innerHTML.charAt(0)) - 1];
     displayNote(currentNote);
     menu.style.width = '0%';
 }
@@ -99,8 +95,7 @@ function autoSave() {
  * Removes the current note from the savedNotes array and saves
  */
 function removeNote() {
-    var x = window.confirm('ARE YOU SURE YOU WANT TO DELETE');
-    if (x) {
+    if (window.confirm('ARE YOU SURE YOU WANT TO DELETE')) {
         savedNotes.splice(savedNotes.indexOf(currentNote), 1);
         localStorage.setItem('notes', JSON.stringify(savedNotes));
         displaySavesToMenu();
