@@ -8,21 +8,21 @@
     <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="note.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.3.1.min.js" defer></script>
+    <script type="text/javascript" src="note.js" defer></script>
 </head>
 
 <body>
     <div id='menu'></div>
     <div id='noteEditor'>
         <div id='topBar'>
-            <input id='titleBox' placeholder='**Name Your Note' type='text'>
-            <button id='notesMenuButton'>&#9776;</button>
+            <input id='titleBox' placeholder='**Name Your Note' type='text' oninput="autoSave()">
+            <button id='notesMenuButton' onclick="displaySavesToMenu()">&#9776;</button>
         </div>
-        <textarea id='noteBox' placeholder='**NOTES HERE'>
+        <textarea id='noteBox' placeholder='**NOTES HERE' oninput="autoSave()">
         </textarea>
-        <button id='deleteNote'>X</button>
+        <button id='deleteNote' onclick="removeNote()">X</button>
     </div>
-    <script src="note.js">
-    </script>
 </body>
 
 </html>

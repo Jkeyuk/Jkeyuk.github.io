@@ -1,110 +1,117 @@
+/**
+ * Declarations
+ */
 var menu = document.getElementById('menu');
 var titleBox = document.getElementById('titleBox');
 var noteBox = document.getElementById('noteBox');
-var notesMenuButton = document.getElementById('notesMenuButton');
-var deleteNote = document.getElementById('deleteNote');
+//Array to hold note objects
 var savedNotes = [];
-//NOTE OBJECT constructor**********************************
-var note = function(name, content, index) {
+//var to hold current note being viewed
+var currentNote;
+
+/**
+ * Note class
+ */
+class note {
+    constructor(name, content) {
         this.name = name || 'Note Name here';
         this.content = content;
-        this.index = index;
-        //display note data
-        this.displayData = function() {
-                titleBox.value = '';
-                noteBox.value = '';
-                titleBox.value = this.name;
-                noteBox.value = this.content;
-            }
-            //store note data 
-        this.storeData = function() {
-            this.name = titleBox.value;
-            this.content = noteBox.value;
-            var temp = new note(this.name, this.content, this.index);
-            savedNotes[this.index] = temp;
-            var objectAsJson = JSON.stringify(savedNotes);
-            localStorage.setItem('notes', objectAsJson);
-        }
     }
-    //********INITIALIZE*******************
+}
 
+/**
+ * Display contents of a give note on the note pane
+ * @param {object} note - note object to display
+ */
+function displayNote(note) {
+    titleBox.value = '';
+    noteBox.value = '';
+    titleBox.value = note.name;
+    noteBox.value = note.content;
+}
+
+/**
+ * Initializes a new note ,displays on note pane, and opens note pane
+ */
 function newNote() {
-        var x = savedNotes.length;
-        noteObject = new note('', '', x);
-        noteObject.displayData();
-        menu.style.width = '0%';
-    }
-    //************Display Saves in Menu*******************
-notesMenuButton.addEventListener('click', displaySavesToMenu, false);
+    currentNote = new note('', '');
+    savedNotes[savedNotes.length] = currentNote;
+    displayNote(currentNote);
+    menu.style.width = '0%';
+}
 
+/**
+ * Load notes from local storage into savedNotes array
+ */
+function loadNotes() {
+    if (localStorage.getItem('notes')) {
+        savedNotes = JSON.parse(localStorage.getItem('notes'));
+    }
+}
+
+/**
+ * Build menu from savedNotes array
+ */
+function buildMenu() {
+    menu.innerHTML = '';
+    for (var i = 0; i < savedNotes.length; i++) {
+        menu.innerHTML += '<button class="menuItem" onclick="loadObject(this)">' +
+            savedNotes[i].name +
+            '</button>';
+    }
+    menu.innerHTML += '<button class="menuItem" onclick="newNote()">+New Note</button>';
+}
+
+/**
+ * Loads notes into savedNotes array and builds the menu from the savedNotes array
+ */
 function displaySavesToMenu() {
-        if (localStorage.getItem('notes')) {
-            var noteData = JSON.parse(localStorage.getItem('notes'));
-            savedNotes = noteData;
+    loadNotes();
+    buildMenu();
+    menu.style.width = '100%';
+}
+
+/**
+ * loads the note object from the name of the element calling this function
+ * @param {HTMLElement} obj - the html element that calls this function
+ */
+function loadObject(obj) {
+    for (var i = 0; i < savedNotes.length; i++) {
+        if (savedNotes[i].name === obj.innerHTML) {
+            currentNote = savedNotes[i];
         }
-        var x = savedNotes.length; //counter
-        var y = '<button class="menuItem">+New Note</button>';
-        menu.innerHTML = '';
-        for (var i = 0; i < x; i++) {
-            menu.innerHTML += '<button class="menuItem">' + savedNotes[i].name +
-                '</button>';
-        }
-        menu.innerHTML += y;
-        //add events to menu buttons
-        function events() {
-            menuItem = document.getElementsByClassName("menuItem");
-            var newbuttonspot = (menuItem.length - 1);
-            var x = savedNotes.length;
-            menuItem[newbuttonspot].addEventListener('click', newNote,
-                false);
-            for (var i = 0; i < x; i++) {
-                menuItem[i].addEventListener('click', loadObject, false);
-            }
-        }
-        events();
-        menu.style.width = '100%';
     }
-    //load object***********************************
+    displayNote(currentNote);
+    menu.style.width = '0%';
+}
 
-function loadObject() {
-        var x = this.innerHTML;
-        var counter = savedNotes.length;
-        var savedLength = savedNotes.length;
-
-        function findIndex(name) {
-            for (var i = 0; i < counter; i++) {
-                if (savedNotes[i].name === x) {
-                    return i;
-                }
-            }
-        }
-        var tempObj = savedNotes[findIndex(x)];
-        noteObject = new note(tempObj.name, tempObj.content, findIndex(x));
-        noteObject.displayData();
-        menu.style.width = '0%';
-        noteObject.storeData();
-    }
-    //AUTO SAVE feature*************************
-titleBox.addEventListener('input', autoSave, false);
-noteBox.addEventListener('input', autoSave, false);
-
+/**
+ * saves the current note and savedNotes array to local storage
+ */
 function autoSave() {
-        noteObject.storeData();
-    }
-    //DELETE NOTE******************************************
-deleteNote.addEventListener('click', removeNote, false);
+    var temp = new note(titleBox.value, noteBox.value);
+    savedNotes[savedNotes.indexOf(currentNote)] = temp;
+    currentNote = temp;
+    localStorage.setItem('notes', JSON.stringify(savedNotes));
+}
 
+/**
+ * Removes the current note from the savedNotes array and saves
+ */
 function removeNote() {
-        var x = window.confirm('ARE YOU SURE YOU WANT TO DELETE');
-        if (x) {
-            savedNotes.splice(noteObject.index, 1);
-            var objectAsJson = JSON.stringify(savedNotes);
-            localStorage.setItem('notes', objectAsJson);
-            displaySavesToMenu();
-        } else {
-            return;
-        }
+    var x = window.confirm('ARE YOU SURE YOU WANT TO DELETE');
+    if (x) {
+        savedNotes.splice(savedNotes.indexOf(currentNote), 1);
+        localStorage.setItem('notes', JSON.stringify(savedNotes));
+        displaySavesToMenu();
+    } else {
+        return;
     }
+}
 
-
-displaySavesToMenu();
+/**
+ * when document ready, load saves to menu
+ */
+$(document).ready(function () {
+    displaySavesToMenu();
+});
