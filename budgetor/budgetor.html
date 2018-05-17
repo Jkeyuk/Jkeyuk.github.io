@@ -8,20 +8,19 @@
     <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="budgetor.css" rel="stylesheet">
+    <script type="text/javascript" src="budgetor.js" defer></script>
 </head>
 
 <body>
     <div id='inputWrap'>
         <input id='itemInput' placeholder='*ITEM NAME'>
         <input id='priceInput' placeholder='$' type='number'>
-        <button id='addButton'>+</button>
+        <button id='addButton' onclick="addListItem()">+</button>
     </div>
     <div id='output'></div>
     <div id='totalOutput'>
         <p id='total'></p>
     </div>
-    <script src="budgetor.js">
-    </script>
 </body>
 
 </html>
