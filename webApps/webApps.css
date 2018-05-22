@@ -1,0 +1,33 @@
+body{
+    margin: 0%;
+    background: #129ef5; 
+    background: -webkit-linear-gradient(to right, #E4E5E6, #129ef5);
+    background: linear-gradient(to right, #E4E5E6, #129ef5);
+}
+
+#pageWrap{
+    margin: 5%;
+    font-family: 'Play';
+    font-size: 1.3em;
+}
+
+.projectPane{
+    max-width: 300px;
+    padding: 10px;
+    box-shadow: 1px 2px 4px #686969;
+}
+
+#backLink{
+    text-decoration: none;
+    margin-top: 3%;
+    color: black;
+    font-size: .8em;
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 600px) {
+
+    #pageWrap{
+        font-size: 1em;
+    }
+}
