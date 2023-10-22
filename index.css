@@ -27,7 +27,7 @@ p {
 }
 
 ul {
-    margin-top: 10px;
+    margin-top: 16px;
     padding: 0;
     list-style-type: none;
     font-size: .6em;
@@ -36,18 +36,23 @@ ul {
 li {
     display: inline;
     text-align: center;
-    margin-left: 10px;
-    border-bottom: 1px solid greenyellow;
-}
-
-li:hover {
-    background-color: #5c8b15;
+    margin-right: 8px;
 }
 
 li a {
-    color: white;
-    padding: 5px;
     text-decoration: none;
+}
+
+.iconBut {
+    color: white;
+    background-color: rgb(76, 157, 211);
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+
+.iconBut:hover {
+    color: white;
+    background-color: rgb(23, 75, 110);
 }
 
 @media (max-width: 600px) {
