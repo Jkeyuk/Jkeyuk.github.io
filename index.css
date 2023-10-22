@@ -4,7 +4,7 @@ body , html{
 }
 
 #pageWrap{
-    background-image: url('./img/back.jpg');
+    background-image: url('./img/BlueMoonHighDef.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,9 +12,10 @@ body , html{
 }
 
 #content{
-    margin: 20% 10%;
     color: white;
     position: absolute;
+    left: 55%;
+    top: 60%;
     font-family: 'Play';
     font-size: 2em;
 }
