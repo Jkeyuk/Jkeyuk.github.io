@@ -45,14 +45,14 @@ li a {
 
 .iconBut {
     color: white;
-    background-color: rgb(76, 157, 211);
+    background-color: rgb(57, 118, 158);
     border-radius: 16px;
     padding: 8px 16px;
 }
 
 .iconBut:hover {
     color: white;
-    background-color: rgb(23, 75, 110);
+    background-color: rgb(84, 173, 233);
 }
 
 @media (max-width: 600px) {
