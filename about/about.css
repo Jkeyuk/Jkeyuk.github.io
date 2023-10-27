@@ -1,31 +1,13 @@
-body{
-    margin: 0;
-    background: #129ef5; 
-    background: -webkit-linear-gradient(to right, #E4E5E6, #129ef5);
-    background: linear-gradient(to right, #E4E5E6, #129ef5);  
-}
-
-#pageWrap{
-    max-width: 600px;
-    margin: 5%;
+#ResumePageWrap {
+    color: white;
     font-family: 'Play';
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
-#backLink{
+#backLink {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: .8em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-h3, ul{
-    margin: 0;
-}
-
-@media (max-width: 600px) {
-
-    #pageWrap{
-        font-size: 1em;
-    }
-}
