@@ -5,14 +5,19 @@ html {
     background-color: rgb(39, 38, 38)
 }
 
-#pageWrap {
+h1,
+p {
+    margin: 0;
+}
+
+#FrontPageWrap {
     background-image: url('./img/BlueMoonHighDef.png');
     height: 100%;
     background-position: center;
     background-size: cover;
 }
 
-#content {
+#FrontPageContent {
     color: white;
     position: absolute;
     right: 20%;
@@ -21,26 +26,17 @@ html {
     font-size: 2em;
 }
 
-h1,
-p {
-    margin: 0;
-}
-
-ul {
+#FrontPageList {
     margin-top: 16px;
     padding: 0;
     list-style-type: none;
     font-size: .6em;
 }
 
-li {
+#FrontPageList li {
     display: inline;
     text-align: center;
     margin-right: 8px;
-}
-
-li a {
-    text-decoration: none;
 }
 
 .iconBut {
@@ -48,6 +44,7 @@ li a {
     background-color: rgb(57, 118, 158);
     border-radius: 16px;
     padding: 8px 16px;
+    text-decoration: none;
 }
 
 .iconBut:hover {
