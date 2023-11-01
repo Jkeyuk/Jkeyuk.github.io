@@ -2,7 +2,7 @@ body,
 html {
     margin: 0;
     height: 100%;
-    background-color: rgb(39, 38, 38)
+    background-color: rgb(26, 29, 36)
 }
 
 #NameHeader, #FrontPara {
@@ -63,8 +63,10 @@ html {
 
 .Card_1 {
     display: inline-block;
-    border: 4px solid white;
-    padding: 16px;
+    background-color: rgb(41, 47, 61);
+    border-radius: 16px;
+    box-shadow: 4px 4px black;
+    padding: 24px;
     margin: 16px;
 }
 
