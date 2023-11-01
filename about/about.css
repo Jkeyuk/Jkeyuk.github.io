@@ -7,7 +7,12 @@
     font-size: 2em;
 }
 
-#EducationDiv h3,p{
+#ResumePageWrap>div {
+    width: 75%;
+}
+
+#EducationDiv h3,
+p {
     margin: 0px;
     margin-top: 8px;
 }
@@ -18,4 +23,3 @@
     font-size: .8em;
     border-bottom: 1px solid rgb(255, 255, 255);
 }
-
