@@ -1,11 +1,10 @@
 #ResumePageWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
     font-family: 'Play';
     font-size: 2em;
-}
-
-#EducationDiv{
-    padding: 16px;
 }
 
 #EducationDiv h3,p{

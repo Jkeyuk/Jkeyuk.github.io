@@ -61,6 +61,13 @@ html {
     margin-left: 8px;
 }
 
+.Card_1 {
+    display: inline-block;
+    border: 4px solid white;
+    padding: 16px;
+    margin: 16px;
+}
+
 @media (max-width: 600px) {
 
     #content {
