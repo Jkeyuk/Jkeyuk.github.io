@@ -2,7 +2,9 @@ body,
 html {
     margin: 0;
     height: 100%;
-    background-color: rgb(26, 29, 36)
+    background-color: rgb(26, 29, 36);
+    color: white;
+    font-family: 'Play';
 }
 
 #NameHeader, #FrontPara {
@@ -21,7 +23,6 @@ html {
     position: absolute;
     right: 20%;
     bottom: 30%;
-    font-family: 'Play';
     font-size: 2em;
 }
 
