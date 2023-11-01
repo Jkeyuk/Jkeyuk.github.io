@@ -51,6 +51,16 @@ html {
     background-color: rgb(84, 173, 233);
 }
 
+.IconTitle{
+    display: inline-block;
+}
+
+.IconTitle h1{
+    display: inline;
+    margin: 0px;
+    margin-left: 8px;
+}
+
 @media (max-width: 600px) {
 
     #content {

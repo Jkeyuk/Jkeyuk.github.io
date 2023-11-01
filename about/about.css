@@ -4,6 +4,15 @@
     font-size: 2em;
 }
 
+#EducationDiv{
+    padding: 16px;
+}
+
+#EducationDiv h3,p{
+    margin: 0px;
+    margin-top: 8px;
+}
+
 #backLink {
     text-decoration: none;
     color: white;
