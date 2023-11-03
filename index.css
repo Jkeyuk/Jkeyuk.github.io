@@ -5,6 +5,7 @@ html {
     background-color: rgb(26, 29, 36);
     color: white;
     font-family: 'Play';
+    font-size: 1.3em;
 }
 
 #NameHeader,
@@ -24,14 +25,12 @@ html {
     position: absolute;
     right: 20%;
     bottom: 30%;
-    font-size: 2em;
 }
 
 #FrontPageList {
     margin-top: 16px;
     padding: 0;
     list-style-type: none;
-    font-size: .6em;
 }
 
 #FrontPageList li {
@@ -76,11 +75,6 @@ html {
     margin-bottom: 16px;
 }
 
-.Card_1 h3,
-p, ul {
-    margin: 0px;
-}
-
 .tableStyled {
     border: 1px solid;
     border-radius: 8px;
@@ -92,10 +86,6 @@ td {
     padding: 16px;
 }
 
-@media (max-width: 600px) {
-
-    #content {
-        font-size: 1.5em;
-    }
-
+.noMarg {
+    margin: 0px;
 }
