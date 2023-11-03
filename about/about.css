@@ -1,31 +1,12 @@
-body{
-    margin: 0;
-    background: #129ef5; 
-    background: -webkit-linear-gradient(to right, #E4E5E6, #129ef5);
-    background: linear-gradient(to right, #E4E5E6, #129ef5);  
+#ResumePageWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#pageWrap{
-    max-width: 600px;
-    margin: 5%;
-    font-family: 'Play';
-    font-size: 1.5em;
-}
-
-#backLink{
+#backLink {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: .8em;
-    border-bottom: 1px solid black;
-}
-
-h3, ul{
-    margin: 0;
-}
-
-@media (max-width: 600px) {
-
-    #pageWrap{
-        font-size: 1em;
-    }
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
