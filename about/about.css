@@ -7,9 +7,8 @@
 }
 
 #EducationDiv h3,
-p {
+p, ul {
     margin: 0px;
-    margin-top: 8px;
 }
 
 #backLink {
