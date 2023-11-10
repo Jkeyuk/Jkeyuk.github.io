@@ -42,6 +42,7 @@ html {
 .iconBut {
     color: white;
     background-color: rgb(57, 118, 158);
+    box-shadow: 6px 6px black;
     border-radius: 16px;
     padding: 8px 16px;
     text-decoration: none;
@@ -66,7 +67,7 @@ html {
     display: inline-block;
     background-color: rgb(41, 47, 61);
     border-radius: 16px;
-    box-shadow: 4px 4px black;
+    box-shadow: 8px 8px black;
     padding: 32px;
     margin: 16px;
 }
