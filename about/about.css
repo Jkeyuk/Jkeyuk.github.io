@@ -9,6 +9,7 @@ html {
 }
 
 #ResumePageWrap {
+  background-color: var(--crust);
   display: flex;
   flex-direction: column;
   align-items: center;
