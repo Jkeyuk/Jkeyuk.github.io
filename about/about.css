@@ -1,3 +1,7 @@
+p {
+  margin: 0;
+}
+
 body,
 html {
   margin: 0;
@@ -27,7 +31,7 @@ html {
   height: 64px;
 }
 
-#prog_icon_div{
+#prog_icon_div {
   display: flex;
   justify-content: space-around;
 }
@@ -38,10 +42,26 @@ html {
   align-items: center;
 }
 
-.prog_box p {
-    margin: 0;
-}
-
 hr {
   color: var(--text);
+}
+
+.tableStyled {
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.tableStyled th,
+td {
+  padding: 16px;
+}
+
+.table_div {
+  display: flex;
+  align-items: end;
+}
+
+.table_div p {
+    padding: 4px;
 }

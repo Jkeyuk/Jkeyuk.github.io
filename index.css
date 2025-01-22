@@ -104,18 +104,6 @@ html {
   margin: 16px;
 }
 
-
-.tableStyled {
-  border: 1px solid;
-  border-radius: 8px;
-  margin: 8px;
-}
-
-.tableStyled th,
-td {
-  padding: 16px;
-}
-
 .noMarg {
   margin: 0px;
 }
