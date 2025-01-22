@@ -1,12 +1,26 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  background-color: var(--crust);
+  color: var(--text);
+  font-family: "Play";
+  font-size: 1.3em;
+}
+
 #ResumePageWrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #backLink {
-    text-decoration: none;
-    color: white;
-    font-size: .8em;
-    border-bottom: 1px solid rgb(255, 255, 255);
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+hr {
+  color: var(--text);
 }

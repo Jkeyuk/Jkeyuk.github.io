@@ -1,92 +1,120 @@
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
 body,
 html {
-    margin: 0;
-    height: 100%;
-    background-color: rgb(26, 29, 36);
-    color: white;
-    font-family: 'Play';
-    font-size: 1.3em;
+  margin: 0;
+  height: 100%;
+  background-color: var(--crust);
+  color: var(--text);
+  font-family: "Play";
+  font-size: 1.3em;
 }
 
 #NameHeader,
 #FrontPara {
-    margin: 0;
+  margin: 0;
 }
 
 #FrontPageWrap {
-    background-image: url('./img/BlueMoonHighDef.png');
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+  background-image: url("./img/BlueMoonHighDef.png");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 #FrontPageContent {
-    color: white;
-    position: absolute;
-    right: 20%;
-    bottom: 30%;
+  position: absolute;
+  right: 20%;
+  bottom: 30%;
 }
 
 #FrontPageList {
-    margin-top: 16px;
-    padding: 0;
-    list-style-type: none;
+  margin-top: 16px;
+  padding: 0;
+  list-style-type: none;
 }
 
 #FrontPageList li {
-    display: inline;
-    text-align: center;
-    margin-right: 8px;
+  display: inline;
+  text-align: center;
+  margin-right: 8px;
 }
 
 .iconBut {
-    color: white;
-    background-color: rgb(57, 118, 158);
-    box-shadow: 6px 6px black;
-    border-radius: 16px;
-    padding: 8px 16px;
-    text-decoration: none;
+  color: var(--text);
+  background-color: var(--base);
+  border: 1px solid var(--surface0);
+  border-radius: 16px;
+  padding: 4px 16px;
+  text-decoration: none;
 }
 
 .iconBut:hover {
-    color: white;
-    background-color: rgb(84, 173, 233);
+  color: var(--base);
+  background-color: var(--green);
 }
 
 .IconTitle {
-    display: inline-block;
+  display: inline-block;
 }
 
 .IconTitle h1 {
-    display: inline;
-    margin: 0px;
-    margin-left: 8px;
+  display: inline;
+  margin: 0px;
+  margin-left: 8px;
 }
 
 .Card_1 {
-    display: inline-block;
-    background-color: rgb(41, 47, 61);
-    border-radius: 16px;
-    box-shadow: 8px 8px black;
-    padding: 32px;
-    margin: 16px;
+  display: inline-block;
+  background-color: var(--base);
+  border-radius: 16px;
+  box-shadow: 2px 2px black;
+  padding: 32px;
+  margin: 16px;
 }
 
 .Card_1 .IconTitle {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .tableStyled {
-    border: 1px solid;
-    border-radius: 8px;
-    margin: 8px;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 8px;
 }
 
 .tableStyled th,
 td {
-    padding: 16px;
+  padding: 16px;
 }
 
 .noMarg {
-    margin: 0px;
+  margin: 0px;
 }
