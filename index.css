@@ -82,12 +82,15 @@ html {
 }
 
 .IconTitle {
-  display: inline-block;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .IconTitle h1 {
-  display: inline;
   margin: 0px;
+  text-align: center;
+  flex-grow:1;
 }
 
 .IconTitle img {
