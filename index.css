@@ -81,32 +81,6 @@ html {
   background-color: var(--green);
 }
 
-.IconTitle {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.IconTitle h1 {
-  margin: 0px;
-  text-align: center;
-  flex-grow:1;
-}
-
-.IconTitle img {
-  width: 64px;
-  height: 64px;
-}
-
-.Card_1 {
-  display: inline-block;
-  background-color: var(--base);
-  border-radius: 16px;
-  box-shadow: 2px 2px black;
-  padding: 32px;
-  margin: 16px;
-}
-
 .noMarg {
   margin: 0px;
 }
