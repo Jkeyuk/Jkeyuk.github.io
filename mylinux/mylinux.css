@@ -6,7 +6,7 @@ html {
 
 #pagewrap {
   background-color: var(--crust);
-  padding: 0 15%;
+  padding: 32px 15%;
   display: flex;
   flex-direction: column;
 }
