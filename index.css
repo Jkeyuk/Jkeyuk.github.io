@@ -56,15 +56,16 @@ html {
 }
 
 #FrontPageList {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 16px;
   padding: 0;
   list-style-type: none;
 }
 
 #FrontPageList li {
-  display: inline;
+  padding: 6px;
   text-align: center;
-  margin-right: 8px;
 }
 
 .iconBut {
